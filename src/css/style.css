@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Vendors */
+@import "/src/css/vendors/normalize.css";
+
+/* Utils */
+@import "utils/variables.css";
+
+/* Base */
+@import "base/main.css";
+@import "base/media.css";
+
+/* Layout */
+@import "layout/header.css";
+@import "layout/footer.css";
+
+/* Components */
+@import "components/button.css";
+@import "components/card.css";
+@import "components/hero.css";
+@import "components/section.css";
+@import "components/intro.css";
+@import "components/lightbox.css";
+@import "components/menu.css";
+@import "components/hook.css";
