@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omni Sphere</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <script type="module" src="/src/js/script.js"></script>
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logoLink" href="/fr/index.html">
+        <img
+          class="header__logo-img"
+          src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg"
+          alt="logo"
+        />
+      </a>
+      <a href="">EN</a>
+      <button
+        class="header__menu-btn menu-btn"
+        aria-label="menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span class="menu-btn__bar" aria-hidden="true"></span>
+      </button>
+      <nav class="menu__list list-unstyled">
+        <a href="/fr/index.html"
+          ><img
+            src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg"
+            alt="logo"
+        /></a>
+        <ul>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/ready-player-one.html"
+              >Ready Player One</a
+            >
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/le-casque-vr.html">Le Casque VR</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/steven-spielberg.html"
+              >Steven Spielberg</a
+            >
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/l-hypothese-de-la-simulation.html"
+              >L'Hypothèse de la Simulation</a
+            >
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/the-oasis.html">The Oasis</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/le-lore.html">Le Lore</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/autres-projets.html"
+              >Autres Projets</a
+            >
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/a-propos.html">À Propos</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/fr/contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="hero hero--page">
+        <img
+          class="hero__ellipse"
+          src="/assets/img/icons/ellipse2.webp"
+          alt=""
+        />
+        <img
+          class="hero__img"
+          src="/assets/img//hero/hero_contact.webp"
+          alt=""
+        />
+      </div>
+      <section class="hook">
+        <h2 class="hook__title">Contactez-Nous</h2>
+        <p class="hook__date">Publié le 21 octobre 2024 à 15h53</p>
+      </section>
+      <div>
+        <p>
+          Que vous ayez des questions, des commentaires ou des suggestions,
+          n'hésitez pas à nous contacter. Nous serions ravis d'échanger avec
+          vous. Voici les différentes façons de nous contacter :
+        </p>
+        <ul>
+          <il>Email : contact@omnisphere.com</il>
+          <il>Téléphone : 03 81 99 47 34</il>
+          <il>Adresse postale : 4 Place Tharradin, 25200 Montbéliard</il>
+        </ul>
+      </div>
+      <div>
+        <p>
+          Ou utilisez notre formulaire de contact ci-dessous pour nous envoyer
+          un message directement :
+        </p>
+        <section class="contact">
+          <form action="#" method="post" class="contact__form">
+            <div class="contact__group">
+              <label for="name" class="contact__label"
+                >Nom:
+                <span class="contact__label-required"
+                  >(Champ obligatoire)</span
+                ></label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="contact__input"
+                placeholder="Entrez votre prénom"
+                required
+              />
+            </div>
+
+            <div class="contact__group">
+              <label for="email" class="contact__label"
+                >Prénom :
+                <span class="contact__label-required"
+                  >(Champ obligatoire)</span
+                ></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="contact__input"
+                placeholder="Entrez votre nom"
+                required
+              />
+            </div>
+
+            <div class="contact__group">
+              <label for="request-type" class="contact__label">Email</label>
+              <input
+                type="text"
+                id="request-type"
+                name="request-type"
+                class="contact__input"
+                placeholder="Entrez votre adresse email"
+              />
+            </div>
+
+            <div class="contact__group">
+              <label for="message" class="contact__label">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                class="contact__textarea"
+                rows="5"
+                placeholder="Écrivez votre message ici"
+              ></textarea>
+            </div>
+
+            <div class="button-container">
+              <button type="submit" class="button">Envoyer</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <h4 class="footer__title">OmniSphère.</h4>
+      <div class="footer__links">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="">À PROPOS</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="">CONTACT</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="">AUTRES PROJETS</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <p class="footer__social-title">NOUS SUIVRE</p>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="">
+              <img
+                class="footer__social-icon"
+                src="/assets/img/icons/logo/logo_instagram.svg"
+                alt="Instagram"
+              />
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="">
+              <img
+                class="footer__social-icon"
+                src="/assets/img/icons/logo/logo_facebook.svg"
+                alt="Facebook"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__legal">
+        <p class="footer__legal-title">Mentions Légales</p>
+        <p class="footer__legal-text">
+          © 2024 OmniShère. - Projet réalisé en 2024 dans le cadre d’un exercice
+          pédagogique au département
+          <a class="footer__legal-link" href="">MMI de Montbéliard</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
