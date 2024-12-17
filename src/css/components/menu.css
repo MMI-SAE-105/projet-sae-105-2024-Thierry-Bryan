@@ -1,0 +1,56 @@
+.menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--violet);
+}
+
+.menu__logo img{
+    width: 72px;
+    height: auto;
+}
+
+.menu[aria-hidden="false"] {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.menu-btn {
+    position: relative;
+    background-color:transparent;
+    display: flex;
+    width: 32px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 1;
+    border: none;
+    color: white;
+    padding: 10px;
+}
+
+.menu-btn__bar,
+.menu-btn__bar::before,
+.menu-btn__bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.4s ease-in-out;
+}
+
+.menu-btn__bar::before {
+    top: 10px;
+}
+
+.menu-btn__bar::after {
+    top: -10px;
+}

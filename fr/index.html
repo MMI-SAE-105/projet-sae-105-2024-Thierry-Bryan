@@ -17,17 +17,19 @@
           alt="logo"
         />
       </a>
-      <a class="header__langue" href="">EN</a>
-      <button
-        class="header__menu-btn menu-btn"
-        aria-label="menu"
-        aria-expanded="false"
-        aria-controls="mainNav"
-      >
-        <span class="menu-btn__bar" aria-hidden="true"></span>
-      </button>
-      <nav class="menu__list list-unstyled">
-        <a href="/fr/index.html"
+      <div class="header__right">
+        <a class="header__langue" href="">EN</a>
+        <button
+          class="header__menu-btn menu-btn"
+          aria-label="menu"
+          aria-expanded="false"
+          aria-controls="mainNav"
+        >
+          <span class="menu-btn__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+      <nav class="header__menu menu" id="mainNav" aria-hidden="true">
+        <a class="menu__logo" href="/fr/index.html"
           ><img
             src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg"
             alt="logo"
@@ -73,9 +75,18 @@
     </header>
     <main>
       <section class="hero">
-        <img src="/assets/img/hero/hero_accueil.webp" alt="fond accueil" />
-        <img src="/assets/img/hero/3d-casque-vr.webp" alt="" />
         <img
+          class="hero__background"
+          src="/assets/img/hero/hero_accueil.webp"
+          alt="fond accueil"
+        />
+        <img
+          class="hero__casque"
+          src="/assets/img/hero/3d-casque-vr.webp"
+          alt=""
+        />
+        <img
+          class="hero__fleche"
           src="/assets/img/icons/icon/icon_fleche-accueil.svg"
           alt="fleche accueil"
         />
@@ -93,7 +104,7 @@
         </p>
       </div>
       <section>
-        <div class="card">
+        <article class="card">
           <h2 class="card__title">Ready Player One</h2>
           <p class="card__text">
             Plongez dans l'univers d'Oasis, où la quête de l'Easter egg pourrait
@@ -107,8 +118,8 @@
           <div class="card__button button">
             <a class="button-link" href="">Découvrir Ready Player One</a>
           </div>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <h2 class="card__title">Le Casque VR</h2>
           <p class="card__text">
             Explorez le lore du casque VR en 2124, désormais au cœur d'un futur
@@ -123,8 +134,8 @@
           <div class="card__button button">
             <a class="button-link" href="">Découvrir Ready Player One</a>
           </div>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <h2 class="card__title">Steven Spielberg</h2>
           <p class="card__text">
             Maître visionnaire, Spielberg a redéfini le cinéma en explorant avec
@@ -138,8 +149,8 @@
           <div class="card__button button">
             <a class="button-link" href="">Découvrir Steven Spielberg</a>
           </div>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <h2 class="card__title">L’Hypothèse de la Simulation</h2>
           <p class="card__text">
             Rizwan Virk nous plonge dans l'hypothèse troublante : et si notre
@@ -155,8 +166,8 @@
               >Découvrir “l’Hypothèse de la Simulation”</a
             >
           </div>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <h2 class="card__title">The Oasis</h2>
           <p class="card__text">
             La bande-son de Ready Player One vous plonge dans l'univers
@@ -170,8 +181,8 @@
           <div class="card__button button">
             <a class="button-link" href="">Découvrir “The Oasis”</a>
           </div>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <h2 class="card__title">Réalités Entrelacées</h2>
           <p class="card__text">
             La réalité virtuelle a redéfini notre monde, plongeant l'humanité
@@ -186,7 +197,7 @@
           <div class="card__button button">
             <a class="button-link" href="">Découvrir “Le Lore”</a>
           </div>
-        </div>
+        </article>
       </section>
     </main>
     <footer class="footer">

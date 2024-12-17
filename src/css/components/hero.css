@@ -1,0 +1,39 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero__title {
+    position: absolute;
+    color: var(--blanc);
+    font-family: var(--font-secondary);
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    top: 250px;
+    z-index: 2;
+    padding-left: 30px;
+}
+
+.hero__background {
+    z-index: 0;
+}
+
+.hero__casque {
+    position: absolute;
+    z-index: 1;
+    top: 345px;
+    width: 380px;
+    height: 292px;
+}
+
+.hero__fleche {
+    position: absolute;
+    z-index: 1;
+    top: 880px;
+    width: 50.991px;
+    height: auto;
+}
