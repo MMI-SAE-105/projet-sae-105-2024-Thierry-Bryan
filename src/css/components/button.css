@@ -1,0 +1,28 @@
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 36px;
+    
+}
+
+.button-link {
+    border: solid 2px var(--violet);
+    display: inline-flex;
+    padding: 20px 37px;
+    background-color: var(--blanc);
+    text-decoration: none;
+    font-family: var(--font-secondary);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.08px;
+    text-align: center;
+    color: var(--noir);
+    font-weight: bold;
+    border: 1px solid;
+    border-image: linear-gradient(45deg, var(--bleu), var(--rose)) 1;
+
+}
+

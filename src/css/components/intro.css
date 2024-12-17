@@ -1,0 +1,12 @@
+.intro {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.intro__text {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    text-align: center;
+}
