@@ -6,6 +6,8 @@
 }
 
 .hero__title {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--blanc, #FFF);
     position: absolute;
     color: var(--blanc);
     font-family: var(--font-secondary);
@@ -13,9 +15,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 110%;
-    top: 250px;
+    top: 260px;
     z-index: 2;
     padding-left: 30px;
+    
 }
 
 .hero__background {
@@ -25,9 +28,10 @@
 .hero__casque {
     position: absolute;
     z-index: 1;
-    top: 345px;
+    top: 365px;
     width: 380px;
     height: 292px;
+    padding-left: 50px;
 }
 
 .hero__fleche {

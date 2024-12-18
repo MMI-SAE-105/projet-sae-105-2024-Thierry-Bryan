@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -16,22 +17,24 @@
           alt="logo"
         />
       </a>
-      <a href="">EN</a>
-      <button
-        class="header__menu-btn menu-btn"
-        aria-label="menu"
-        aria-expanded="false"
-        aria-controls="mainNav"
-      >
-        <span class="menu-btn__bar" aria-hidden="true"></span>
-      </button>
-      <nav class="menu__list list-unstyled">
-        <a href="/fr/index.html"
+      <div class="header__right">
+        <a class="header__langue" href="">EN</a>
+        <button
+          class="header__menu-btn menu-btn"
+          aria-label="menu"
+          aria-expanded="false"
+          aria-controls="mainNav"
+        >
+          <span class="menu-btn__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+      <nav class="header__menu menu" id="mainNav" aria-hidden="true">
+        <a class="menu__logo" href="/fr/index.html"
           ><img
             src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg"
             alt="logo"
         /></a>
-        <ul>
+        <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="/fr/ready-player-one.html"
               >Ready Player One</a
@@ -68,6 +71,30 @@
             <a class="menu__link" href="/fr/contact.html">Contact</a>
           </li>
         </ul>
+        <div class="menu__social">
+          <p class="menu__social-title">NOUS SUIVRE</p>
+          <ul class="menu__social-list">
+            <li class="menu__social-item">
+              <a class="menu__social-link" href="">
+                <img
+                  class="menu__social-icon"
+                  src="/assets/img/icons/logo/logo_instagram.svg"
+                  alt="Instagram"
+                />
+              </a>
+            </li>
+            <li class="menu__social-item">
+              <a class="menu__social-link" href="">
+                <img
+                  class="menu__social-icon"
+                  src="/assets/img/icons/logo/logo_facebook.svg"
+                  alt="Facebook"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <img class="menu__background" src="/assets/img/menu/menu-background.webp" alt="">
       </nav>
     </header>
     <main>
