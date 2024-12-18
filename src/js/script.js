@@ -1,5 +1,5 @@
 // On cible les éléments à modifier
-const toggle = document.querySelector(".menu-btn");
+const toggle = document.querySelector(".menu-btn, .menu-btn--page");
 const nav = document.querySelector(".menu");
 const page = document.body;
 

@@ -7,7 +7,6 @@
 }
 
 .button-link {
-    border: solid 2px var(--violet);
     display: inline-flex;
     padding: 20px 37px;
     background-color: var(--blanc);
@@ -23,6 +22,6 @@
     font-weight: bold;
     border: 1px solid;
     border-image: linear-gradient(45deg, var(--bleu), var(--rose)) 1;
-
+    border-radius: 50%;
 }
 

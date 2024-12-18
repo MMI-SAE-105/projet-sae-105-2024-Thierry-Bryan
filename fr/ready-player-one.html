@@ -9,25 +9,28 @@
     <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" />
   </head>
   <body>
-    <header class="header">
-      <a class="header__logoLink" href="/fr/index.html">
+    <header class="header--page">
+      <a class="header__logoLink--page" href="/fr/index.html">
         <img
-          class="header__logo-img"
-          src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg"
+          class="header__logo-img--page"
+          src="/assets/img/icons/logo/logo_omni-sphere-noir.svg"
           alt="logo"
         />
+        <h2 class="header__logo-title">OmniSphère.</h2>
       </a>
-      <div class="header__right">
-        <a class="header__langue" href="">EN</a>
+
+      <div class="header__right--page">
+        <a class="header__langue--page" href="">EN</a>
         <button
-          class="header__menu-btn menu-btn"
+          class="header__menu-btn menu-btn--page"
           aria-label="menu"
           aria-expanded="false"
           aria-controls="mainNav"
         >
-          <span class="menu-btn__bar" aria-hidden="true"></span>
+          <span class="menu-btn__bar--page" aria-hidden="true"></span>
         </button>
       </div>
+      <hr class="header__line" />
       <nav class="header__menu menu" id="mainNav" aria-hidden="true">
         <a class="menu__logo" href="/fr/index.html"
           ><img
@@ -94,7 +97,11 @@
             </li>
           </ul>
         </div>
-        <img class="menu__background" src="/assets/img/menu/menu-background.webp" alt="">
+        <img
+          class="menu__background"
+          src="/assets/img/menu/menu-background.webp"
+          alt=""
+        />
       </nav>
     </header>
     <main>
@@ -120,48 +127,55 @@
         </p>
         <p class="hook__date">Publié le 21 octobre 2024 à 15h53</p>
       </section>
-      <div>
+      <div class="ready-player-one">
         <img
+          class="ready-player-one__logo"
           src="/assets/img/page-film_ready-player-one/logo_ready-player-one.webp"
           alt="logo ready player one"
         />
-        <div>
-          <video src=""></video>
-          <a href="https://www.youtube.com/watch?v=oYGkAMHCOC4&t=5s"
+        <div class="ready-player-one__trailer">
+          <video class="ready-player-one__video" src=""></video>
+          <a
+            class="ready-player-one__link"
+            href="https://www.youtube.com/watch?v=oYGkAMHCOC4&t=5s"
             >Bande annonce Ready Player One</a
           >
         </div>
-        <div class="content">
-          <h3 class="content__title">Synopsis</h3>
-          <p class="content__text">
-            Ready Player One est un film de science-fiction sorti en 2018,
-            réalisé par Steven Spielberg, qui s’inspire du roman éponyme
-            d’Ernest Cline. L’histoire se déroule en 2045, dans un monde
-            dystopique où les gens fuient la morosité de leur existence
-            quotidienne en se plongeant dans l’OASIS, un univers de réalité
-            virtuelle riche en possibilités.
-          </p>
-          <figure class="content__img">
-            <img
-              src="/assets/img/page-film_ready-player-one/image-film.webp"
-              alt="ready player one"
-            />
-            <figcaption class="content__img-legend">
-              Scène de Ready Player One
-            </figcaption>
-          </figure>
-          <p class="content__text">
-            Sous son avatar "Parzival », le protagoniste, Wade Watts, un
-            adolescent orphelin, s'engage dans une quête pour trouver un œuf de
-            Pâques caché par le créateur de l’OASIS, James Halliday. Cet œuf
-            promet non seulement une fortune colossale, mais aussi le contrôle
-            total de l’OASIS. Au cours de son périple, Wade fait face à de
-            nombreux défis, à la fois virtuels et réels, et découvre
-            l’importance de l’amitié et du courage.
-          </p>
-          <a class="content__link">En savoir plus sur Ready Player One</a>
+      </div>
+      <div class="content">
+        <h3 class="content__title">Synopsis</h3>
+        <p class="content__text">
+          Ready Player One est un film de science-fiction sorti en 2018, réalisé
+          par Steven Spielberg, qui s’inspire du roman éponyme d’Ernest Cline.
+          L’histoire se déroule en 2045, dans un monde dystopique où les gens
+          fuient la morosité de leur existence quotidienne en se plongeant dans
+          l’OASIS, un univers de réalité virtuelle riche en possibilités.
+        </p>
+        <figure class="content__img">
+          <img
+            src="/assets/img/page-film_ready-player-one/image-film.webp"
+            alt="ready player one"
+          />
+          <figcaption class="content__img-legend">
+            Scène de Ready Player One
+          </figcaption>
+        </figure>
+        <p class="content__text">
+          Sous son avatar "Parzival », le protagoniste, Wade Watts, un
+          adolescent orphelin, s'engage dans une quête pour trouver un œuf de
+          Pâques caché par le créateur de l’OASIS, James Halliday. Cet œuf
+          promet non seulement une fortune colossale, mais aussi le contrôle
+          total de l’OASIS. Au cours de son périple, Wade fait face à de
+          nombreux défis, à la fois virtuels et réels, et découvre l’importance
+          de l’amitié et du courage.
+        </p>
+        <div class="content__link-container">
+          <a class="content__link" href=""
+            >En savoir plus sur Ready Player One</a
+          >
         </div>
       </div>
+
       <blockquote class="quote">"Un univers de réalité virtuelle"</blockquote>
       <div class="content">
         <h3 class="content__title">Steven Spielberg</h3>
@@ -182,14 +196,14 @@
           aussi les conséquences de cette immersion dans des mondes virtuels.
         </p>
         <div class="button">
-          <a href="button-link">Découvrir Steven Spielberg</a>
+          <a class="button-link" href="">Découvrir Steven Spielberg</a>
         </div>
       </div>
       <div class="content">
         <h3 class="content__title">Musique "The Oasis"</h3>
         <figure class="content__img">
           <img
-            src="/assets/img/page-film_ready-player-one/steven-spielberg.webp"
+            src="/assets/img/page-film_ready-player-one/musique.webp"
             alt="steven spielberg"
           />
           <figcaption class="content__img-legend">
@@ -203,7 +217,7 @@
           univers où tout est possible.
         </p>
         <div class="button">
-          <a href="button-link">Découvrir "The Oasis"</a>
+          <a class="button-link" href="">Découvrir "The Oasis"</a>
         </div>
       </div>
       <div class="content">

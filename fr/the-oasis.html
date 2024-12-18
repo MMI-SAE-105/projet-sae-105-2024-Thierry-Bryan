@@ -9,30 +9,35 @@
     <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" />
   </head>
   <body>
-    <header class="header">
-      <a class="header__logoLink" href="/fr/index.html">
+    <header class="header--page">
+      <a class="header__logoLink--page" href="/fr/index.html">
         <img
-          class="header__logo-img"
-          src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg"
+          class="header__logo-img--page"
+          src="/assets/img/icons/logo/logo_omni-sphere-noir.svg"
           alt="logo"
         />
+        <h2 class="header__logo-title">OmniSphère.</h2>
       </a>
-      <a href="">EN</a>
-      <button
-        class="header__menu-btn menu-btn"
-        aria-label="menu"
-        aria-expanded="false"
-        aria-controls="mainNav"
-      >
-        <span class="menu-btn__bar" aria-hidden="true"></span>
-      </button>
-      <nav class="menu__list list-unstyled">
-        <a href="/fr/index.html"
+
+      <div class="header__right--page">
+        <a class="header__langue--page" href="">EN</a>
+        <button
+          class="header__menu-btn menu-btn--page"
+          aria-label="menu"
+          aria-expanded="false"
+          aria-controls="mainNav"
+        >
+          <span class="menu-btn__bar--page" aria-hidden="true"></span>
+        </button>
+      </div>
+      <hr class="header__line" />
+      <nav class="header__menu menu" id="mainNav" aria-hidden="true">
+        <a class="menu__logo" href="/fr/index.html"
           ><img
             src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg"
             alt="logo"
         /></a>
-        <ul>
+        <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="/fr/ready-player-one.html"
               >Ready Player One</a
@@ -58,7 +63,9 @@
             <a class="menu__link" href="/fr/le-lore.html">Le Lore</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="/fr/autres-projets.html">Autres Projets</a>
+            <a class="menu__link" href="/fr/autres-projets.html"
+              >Autres Projets</a
+            >
           </li>
           <li class="menu__item">
             <a class="menu__link" href="/fr/a-propos.html">À Propos</a>
@@ -67,12 +74,48 @@
             <a class="menu__link" href="/fr/contact.html">Contact</a>
           </li>
         </ul>
+        <div class="menu__social">
+          <p class="menu__social-title">NOUS SUIVRE</p>
+          <ul class="menu__social-list">
+            <li class="menu__social-item">
+              <a class="menu__social-link" href="">
+                <img
+                  class="menu__social-icon"
+                  src="/assets/img/icons/logo/logo_instagram.svg"
+                  alt="Instagram"
+                />
+              </a>
+            </li>
+            <li class="menu__social-item">
+              <a class="menu__social-link" href="">
+                <img
+                  class="menu__social-icon"
+                  src="/assets/img/icons/logo/logo_facebook.svg"
+                  alt="Facebook"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <img
+          class="menu__background"
+          src="/assets/img/menu/menu-background.webp"
+          alt=""
+        />
       </nav>
     </header>
     <main>
-      <div>
-        <img src="/assets/img/icons/ellipse2.webp" alt="" />
-        <img src="/assets/img/hero/hero_musique.webp" alt="" />
+      <div class="hero hero--page">
+        <img
+          class="hero__ellipse"
+          src="/assets/img/icons/ellipse2.webp"
+          alt=""
+        />
+        <img
+          class="hero__img"
+          src="/assets/img/hero/hero_ready-player-one.webp"
+          alt=""
+        />
       </div>
       <section class="hook">
         <h2 class="hook__title">

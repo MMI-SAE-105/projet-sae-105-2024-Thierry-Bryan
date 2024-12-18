@@ -36,6 +36,21 @@
     padding: 10px;
 }
 
+.menu-btn--page {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    width: 32px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 1;
+    border: none;
+    color: var(--noir);
+    padding: 10px;
+}
+
 .menu-btn__bar,
 .menu-btn__bar::before,
 .menu-btn__bar::after {
@@ -57,6 +72,28 @@
     top: -10px;
 }
 
+.menu-btn__bar--page,
+.menu-btn__bar--page::before,
+.menu-btn__bar--page::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: var(--noir);
+    height: 3.6px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.4s ease-in-out;
+}
+
+.menu-btn__bar--page::before {
+    top: 10px;
+}
+
+.menu-btn__bar--page::after {
+    top: -10px;
+}
+
+
 .menu-btn[aria-expanded="true"] .menu-btn__bar,
 .menu-btn[aria-expanded="true"] .menu-btn__bar::before,
 .menu-btn[aria-expanded="true"] .menu-btn__bar::after {
@@ -70,6 +107,19 @@
     top: 0;
 }
 
+.menu-btn--page[aria-expanded="true"] .menu-btn__bar--page,
+.menu-btn--page[aria-expanded="true"] .menu-btn__bar--page::before,
+.menu-btn--page[aria-expanded="true"] .menu-btn__bar--page::after {
+    transform: rotate(135deg);
+    background: var(--rose);
+}
+
+.menu-btn--page[aria-expanded="true"] .menu-btn__bar--page::before,
+.menu-btn--page[aria-expanded="true"] .menu-btn__bar--page::after {
+    transform: rotate(90deg);
+    top: 0;
+}
+
 .menu__link {
     font-family: var(--font-secondary);
     font-size: 20px;
@@ -79,6 +129,7 @@
     text-decoration: none;
     list-style: none;
     color: var(--blanc);
+    
 }
 
 .menu__list {

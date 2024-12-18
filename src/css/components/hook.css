@@ -1,0 +1,25 @@
+.hook {
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.hook__title {
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+}
+
+.hook__text {
+    line-height: 136%;
+}
+
+.hook__date {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+}

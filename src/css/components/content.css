@@ -1,0 +1,41 @@
+.content {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.content__title {
+    text-align: center;
+    font-family: var(--font-secondary);
+    font-style: normal;
+}
+
+.content__text {
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.content__img-legend {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+}
+
+.content__link {
+    text-align: end;
+}
+
+.content__link-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content__subtitle {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
