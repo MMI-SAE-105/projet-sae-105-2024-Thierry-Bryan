@@ -1,10 +1,13 @@
 .button {
-    display: flex;
-    justify-content: center;
     margin-top: 20px;
     margin-bottom: 36px;
-    
+    flex-direction: column;
+    display: inline-block;
+    padding: 1.2px;
+    background: linear-gradient(45deg, var(--bleu), var(--rose));
+    border-radius: 20px;
 }
+
 
 .button-link {
     display: inline-flex;
@@ -20,8 +23,6 @@
     text-align: center;
     color: var(--noir);
     font-weight: bold;
-    border: 1px solid;
-    border-image: linear-gradient(45deg, var(--bleu), var(--rose)) 1;
-    border-radius: 50%;
-}
+    border-radius: 19px;
 
+}
