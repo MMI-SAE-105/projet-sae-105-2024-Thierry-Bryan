@@ -1,0 +1,172 @@
+.frise__timeline-item--1974 {
+    margin-top: -100px;
+}
+
+.frise__timeline-item--1994 {
+    margin-top: -260px;
+}
+
+.frise__timeline-item--2024 {
+    margin-top: -215px;
+}
+
+.frise__timeline-item--2048 {
+    margin-top: -230px;
+}
+
+.frise__timeline-item--2084 {
+    margin-top: -165px;
+}
+
+.frise__timeline-item--2124 {
+    margin-top: -185px;
+}
+
+.frise__timeline-img-1974 {
+    width: 165px;
+    height: auto;
+}
+
+.frise__timeline-img-1994 {
+    width: 193px;
+    height: auto;
+    position: relative;
+    left: -20;
+}
+
+.frise__timeline-img-2024 {
+    width: 180.92px;
+    height: auto;
+    position: relative;
+    left: -10px;
+}
+
+.frise__timeline-img-2048 {
+    width: 159px;
+    height: auto;
+    position: relative;
+    right: -20px;
+    top: -15px;
+    margin-right: -20%;
+}
+
+.frise__timeline-img-2084 {
+    position: relative;
+    width: 183px;
+    height: auto;
+    top: -20px;
+    left: -10px;
+}
+
+.frise__timeline-img-2124 {
+    width: 174px;
+    height: auto;
+    position: relative;
+    top: -30px;
+    right: -10px;
+}
+
+.frise__title {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    text-align: center;
+}
+
+.frise__container-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frise__img {
+    width: 300px;
+    height: 112px;
+}
+
+.frise__timeline {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.frise__timeline-content {
+    margin-top: 20px;
+    margin-bottom: 36px;
+    flex-direction: column;
+    display: inline-block;
+    background: linear-gradient(45deg, var(--bleu), var(--rose));
+    border-radius: 20px;
+    z-index: 1;
+
+}
+
+.frise__timeline-content-border {
+    background-color: var(--blanc);
+    padding: 18px;
+    text-decoration: none;
+    font-family: var(--font-secondary);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 25px;
+    margin-left: 1.2px;
+    margin-right: 1.2px;
+    margin-bottom: 1.2px;
+    margin-top: 1.2px;
+    z-index: 1;
+}
+
+.frise__timeline-date {
+    margin-bottom: 0px;
+    margin-top: 0;
+    color: var(--violet);
+}
+
+.frise__timeline-text {
+    font-family: "Exo 2";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 136%;
+}
+
+.frise__timeline-img--left {
+    position: relative;
+    width: 165px;
+    height: auto;
+    top: 100px;
+    left: -30px;
+}
+
+.frise__timeline-img--right {
+    position: relative;
+    width: 193px;
+    height: auto;
+    top: 130px;
+    right: -60%;
+    margin-right: 0%;
+    display: block;
+}
+
+.frise__timeline-link {
+    width: 260.5px;
+    height: auto;
+    z-index: 0;
+    position: relative;
+    top: -35px;
+}
+
+.frise__timeline-link--right {
+    width: 260.5px;
+    height: auto;
+    z-index: 0;
+    position: relative;
+    top: -45px;
+}
