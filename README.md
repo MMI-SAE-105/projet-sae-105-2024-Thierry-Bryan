@@ -3,8 +3,8 @@
 
 À compléter :
 
-- NOM :
-- PRÉNOM :
-- GROUPE :
-- URL du site :
-- URL FIGMA :
+- NOM : THIERRY
+- PRÉNOM : Bryan
+- GROUPE : C2
+- URL du site : https://omnisphere-1.netlify.app
+- URL FIGMA : https://www.figma.com/design/HXDeVFsN86BQqchati9zgw/Maquettes-projet-individuel-%E2%80%94-Bryan-THIERRY?node-id=3721-589&t=VxZ0aKd3MnmHWzQK-1
