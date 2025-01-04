@@ -1,6 +1,6 @@
 .carousel__controls {
     display: flex;
-    gap: 16px;
+    gap: 0px;
     align-items: center;
     justify-content: center;
     margin: 16px;
