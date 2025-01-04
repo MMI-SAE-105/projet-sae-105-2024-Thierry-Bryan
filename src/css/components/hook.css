@@ -23,3 +23,29 @@
     font-weight: 400;
     line-height: 110%;
 }
+
+.hook__line--top {
+    background: var(--gradient);
+    height: 4px;
+    border: none;
+    border-radius: 10px;
+}
+
+.hook__line--bottom {
+    background: var(--gradient);
+    border: none;
+    height: 4px;
+    position: relative;
+    right: 0;
+}
+
+.hook__line-container--top {
+    position: relative;
+    left: -100px;
+}
+
+.hook__line-container--bottom {
+    position: absolute;
+    right: 0;
+
+}

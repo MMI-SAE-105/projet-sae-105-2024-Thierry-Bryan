@@ -1,0 +1,47 @@
+.carousel__controls {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    z-index: 0;
+}
+
+.carousel__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+}
+
+.carousel__button--next {
+    display: flex;
+}
+
+.carousel__button--prev {
+    display: flex;
+    transform: rotate(180deg);
+}
+
+.carousel__container {
+    display: flex;
+    gap: 16px;
+    overflow-x: scroll;
+    margin-left: -24px;
+    margin-right: -24px;
+    scroll-snap-type: none;
+}
+
+.carousel__item {
+    flex: 1 0 260px;
+    align-items: center;
+    flex-shrink: 0;
+
+}
+
+.carousel__item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}

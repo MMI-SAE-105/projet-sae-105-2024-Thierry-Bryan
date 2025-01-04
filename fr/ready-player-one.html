@@ -118,6 +118,9 @@
         />
       </div>
       <section class="hook">
+        <div class="hook__line-container--top">
+          <hr class="hook__line--top" />
+        </div>
         <h2 class="hook__title">
           “Ready Player One” : L'évasion dans un monde virtuel
         </h2>
@@ -126,6 +129,9 @@
           un monde virtuel où l'évasion devient une quête essentielle.
         </p>
         <p class="hook__date">Publié le 21 octobre 2024 à 15h53</p>
+        <div class="hook__line-container--bottom">
+          <hr class="hook__line--bottom" />
+        </div>
       </section>
       <div class="ready-player-one">
         <img
@@ -222,17 +228,40 @@
       </div>
       <div class="content">
         <h3 class="content__title">Filmographie Associée</h3>
-        <img
-          src="/assets/img/page-film_ready-player-one/tron.webp"
-          alt="tron"
-        /><img
-          src="/assets/img/page-film_ready-player-one/le-probleme-a-trois-corps.webp"
-          alt="le probleme a trois corps"
-        /><img
-          src="/assets/img/page-film_ready-player-one/matrix.webp"
-          alt="matrix"
-        />
-      </div>
+        <div class="carousel" aria-labelledby="carousel-heading">
+          <div class="carousel__container" role="region" aria-live="polite">
+            <div class="carousel__item">
+              <img
+                src="/assets/img/page-film_ready-player-one/tron.webp"
+                alt="tron"
+              />
+            </div>
+            <div class="carousel__item">
+              <img
+                src="/assets/img/page-film_ready-player-one/le-probleme-a-trois-corps.webp"
+                alt="le probleme a trois corps"
+              />
+            </div>
+            <div class="carousel__item">
+              <img
+                src="/assets/img/page-film_ready-player-one/matrix.webp"
+                alt="matrix"
+              />
+            </div>
+          </div>
+          <div class="carousel__controls">
+            <button
+              class="carousel__button carousel__button--prev"
+              aria-label="Défiler vers la gauche"
+            >
+              <img src="/assets/img/icons/icon/icon_fleche.svg" alt="fleche gauche" /></button
+            ><button
+              class="carousel__button carousel__button--next"
+              aria-label="Défiler vers la droite"
+            >
+              <img src="/assets/img/icons/icon/icon_fleche.svg" alt="fleche droite" />
+            </button>
+          </div>
     </main>
     <footer class="footer">
       <h4 class="footer__title">OmniSphère.</h4>

@@ -14,3 +14,16 @@ if (toggle && nav) {
     page.classList.toggle("noscroll", isClosed);
   });
 } 
+
+const nextButton = document.querySelector('.carousel__button--next');
+const prevButton = document.querySelector('.carousel__button--prev');
+const carouselContainer = document.querySelector('.carousel__container');
+
+if (nextButton){
+nextButton.addEventListener('click', () => {
+  carouselContainer.scrollBy({ left: 300, behavior: 'smooth' });
+});}
+if (prevButton) {
+prevButton.addEventListener('click', () => {
+  carouselContainer.scrollBy({ left: -300, behavior: 'smooth' });
+});}
