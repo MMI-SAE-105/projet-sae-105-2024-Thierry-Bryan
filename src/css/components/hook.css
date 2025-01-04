@@ -1,8 +1,8 @@
 .hook {
-    margin-top: 15px;
+    margin-top: 40px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .hook__title {
@@ -25,27 +25,33 @@
 }
 
 .hook__line--top {
+    display: flex;
     background: var(--gradient);
     height: 4px;
     border: none;
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 70%;
+    position: absolute;
 }
 
 .hook__line--bottom {
     background: var(--gradient);
     border: none;
     height: 4px;
-    position: relative;
+    width: 70%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
     right: 0;
 }
 
 .hook__line-container--top {
+    display: flex;
     position: relative;
-    left: -100px;
 }
 
 .hook__line-container--bottom {
-    position: absolute;
-    right: 0;
-
+    display: flex;
+    position: relative;
 }
