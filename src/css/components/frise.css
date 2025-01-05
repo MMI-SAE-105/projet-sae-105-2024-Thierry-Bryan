@@ -1,3 +1,7 @@
+.frise {
+    margin-top: 60px;
+}
+
 .frise__timeline-item--1974 {
     margin-top: -100px;
 }
@@ -25,13 +29,14 @@
 .frise__timeline-img-1974 {
     width: 165px;
     height: auto;
+    position: relative;
 }
 
 .frise__timeline-img-1994 {
     width: 193px;
     height: auto;
     position: relative;
-    left: -20;
+    right: 0;
 }
 
 .frise__timeline-img-2024 {
@@ -45,7 +50,7 @@
     width: 159px;
     height: auto;
     position: relative;
-    right: -20px;
+    right: -35px;
     top: -15px;
     margin-right: -20%;
 }
@@ -63,7 +68,7 @@
     height: auto;
     position: relative;
     top: -30px;
-    right: -10px;
+    right: -20px;
 }
 
 .frise__title {
@@ -142,7 +147,9 @@
     width: 165px;
     height: auto;
     top: 100px;
-    left: -30px;
+    left: -5%;
+    margin-left: 0%;
+    display: block;
 }
 
 .frise__timeline-img--right {
@@ -150,7 +157,7 @@
     width: 193px;
     height: auto;
     top: 130px;
-    right: -60%;
+    right: -55%;
     margin-right: 0%;
     display: block;
 }
