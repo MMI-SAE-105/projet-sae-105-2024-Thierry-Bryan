@@ -7,7 +7,6 @@
     border-radius: 20px;
 }
 
-
 .button-link {
     display: inline-flex;
     padding: 20px 37px;
@@ -23,5 +22,13 @@
     color: var(--noir);
     font-weight: bold;
     border-radius: 19px;
+}
 
+button {
+    border: none;
+}
+
+.button__container--contact {
+    display: flex;
+    justify-content: center;
 }

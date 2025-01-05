@@ -127,20 +127,24 @@
       <div class="hook__line-container--bottom">
         <hr class="hook__line--bottom" />
       </div>
-      <div>
-        <p>
+      <div class="contact__info">
+        <p class="contact__text">
           Que vous ayez des questions, des commentaires ou des suggestions,
           n'hésitez pas à nous contacter. Nous serions ravis d'échanger avec
           vous. Voici les différentes façons de nous contacter :
         </p>
-        <ul>
-          <il>Email : contact@omnisphere.com</il>
-          <il>Téléphone : 03 81 99 47 34</il>
-          <il>Adresse postale : 4 Place Tharradin, 25200 Montbéliard</il>
-        </ul>
+        <div class="contact__details">
+          <ul class="contact__list">
+            <li class="contact__item">Email : contact@omnisphere.com</li>
+            <li class="contact__item">Téléphone : 03 81 99 47 34</li>
+            <li class="contact__item">
+              Adresse postale : 4 Place Tharradin, 25200 Montbéliard
+            </li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <p>
+      <div class="contact__form-intro">
+        <p class="contact__text">
           Ou utilisez notre formulaire de contact ci-dessous pour nous envoyer
           un message directement :
         </p>
@@ -164,16 +168,16 @@
             </div>
 
             <div class="contact__group">
-              <label for="email" class="contact__label"
+              <label for="name" class="contact__label"
                 >Prénom :
                 <span class="contact__label-required"
                   >(Champ obligatoire)</span
                 ></label
               >
               <input
-                type="email"
-                id="email"
-                name="email"
+                type="text"
+                id="name"
+                name="name"
                 class="contact__input"
                 placeholder="Entrez votre nom"
                 required
@@ -181,9 +185,9 @@
             </div>
 
             <div class="contact__group">
-              <label for="request-type" class="contact__label">Email</label>
+              <label for="email" class="contact__label">Email</label>
               <input
-                type="text"
+                type="email"
                 id="request-type"
                 name="request-type"
                 class="contact__input"
@@ -201,9 +205,12 @@
                 placeholder="Écrivez votre message ici"
               ></textarea>
             </div>
-
-            <div class="button-container">
-              <button type="submit" class="button">Envoyer</button>
+            <div class="button__container--contact">
+              <div class="button">
+                <button type="submit" class="button-link">
+                  ENVOYER
+                </button>
+              </div>
             </div>
           </form>
         </section>

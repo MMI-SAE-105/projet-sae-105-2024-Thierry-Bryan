@@ -8,6 +8,7 @@
     --noir: #000000;
     --rose: #fd6eff;
     --violet: #15005b;
+    --gris: #333;
     --Header: rgba(21, 0, 91, 0.80);
     --Header-blanc: rgba(255, 255, 255, 0.85);
     --gradient: linear-gradient(90deg, var(--bleu), var(--rose));

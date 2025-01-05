@@ -1,0 +1,96 @@
+.contact__info {
+    margin-top: 40px;
+}
+
+.contact__details {
+    flex-direction: column;
+    display: inline-block;
+    padding: 1.2px;
+    margin-left: 20px;
+    margin-top: -20px;
+}
+
+.contact__list {
+    padding: 20px 37px;
+    background-color: var(--blanc);
+    font-style: normal;
+    line-height: normal;
+    border-radius: 19px;
+    display: flex;
+    width: 306px;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.contact__text {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.contact {
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-right: 20px;
+
+}
+
+/* Style du formulaire */
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+/* Groupes de champs */
+.contact__group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.contact__label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--noir);
+}
+
+.contact__label-required {
+    font-size: 12px;
+    color: var(--rose);
+    font-weight: normal;
+}
+
+/* Inputs */
+.contact__input,
+.contact__textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    background-color: var(--blanc);
+    color: var(--gris);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Effet de focus sur les champs */
+.contact__input:focus,
+.contact__textarea:focus {
+    box-shadow: 0 0 5px var(--bleu);
+    transform: scale(1.02);
+    /* Léger agrandissement au focus */
+}
+
