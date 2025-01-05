@@ -22,8 +22,16 @@
     color: var(--noir);
     font-weight: bold;
     border-radius: 19px;
+    transition: color 0.3s ease;
 }
 
+.button-link:hover {
+    color: var(--blanc) !important;
+}
+
+/*background: linear-gradient(90deg, var(--rose), var(--bleu-cyan));
+-webkit-background-clip: text;
+color: transparent;*/
 button {
     border: none;
 }
