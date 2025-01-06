@@ -1,0 +1,29 @@
+.ellispe img{
+    width: 109px;
+    height: auto;
+    z-index: -1;
+}
+
+.ellipse--ready-player-one {
+    position: absolute;
+    top: 1530px;
+    right: 10px;
+
+}
+
+.ellipse--ready-player-one-spielberg {
+    position: absolute;
+    top: 2300px;
+    left: 10px;
+}
+
+.ellipse--ready-player-one-musique {
+    position: absolute;
+    top: 2990px;
+    right: 10px;
+}
+
+.ellipse--casque1974 {
+    position: absolute;
+    right: -10px;
+}
