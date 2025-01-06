@@ -81,3 +81,9 @@
 .content__glossary-item {
     margin-bottom: 20px;
 }
+
+.content__img-livre {
+    width: 250px;
+    height: auto;
+}
+

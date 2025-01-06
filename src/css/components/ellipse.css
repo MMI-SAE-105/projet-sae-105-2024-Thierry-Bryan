@@ -1,5 +1,4 @@
 .ellispe img{
-    width: 109px;
     height: auto;
     z-index: -1;
 }
@@ -8,22 +7,144 @@
     position: absolute;
     top: 1530px;
     right: 10px;
-
+    width: 109px;
 }
 
 .ellipse--ready-player-one-spielberg {
     position: absolute;
     top: 2300px;
     left: 10px;
+    width: 109px;
 }
 
 .ellipse--ready-player-one-musique {
     position: absolute;
     top: 2990px;
     right: 10px;
+    width: 109px;
 }
 
 .ellipse--casque1974 {
     position: absolute;
     right: -10px;
+    top: 1110px;
+    width: 140px;
+    visibility: hidden;
+}
+
+.ellipse--casque1994 {
+    position: absolute;
+    left: -10px;
+    top: 1560px;
+    width: 140px;
+    visibility: hidden;
+}
+
+.ellipse--casque2024 {
+    position: absolute;
+    right: -10px;
+    top: 1980px;
+    width: 140px;
+    visibility: hidden;
+}
+
+.ellipse--casque2048 {
+    position: absolute;
+    left: -10px;
+    top: 2440px;
+    width: 140px;
+    visibility: hidden;
+}
+
+.ellipse--casque2084 {
+    position: absolute;
+    right: -10px;
+    top: 2860px;
+    width: 140px;
+    visibility: hidden;
+}
+
+.ellipse--casque2124 {
+    position: absolute;
+    left: -10px;
+    top: 3325px;
+    width: 140px;
+    visibility: hidden;
+}
+
+.ellipse--etat-civil1 {
+    position: absolute;
+    top: 890px;
+    left: -10px;
+    width: 170px;
+}
+
+.ellipse--etat-civil2 {
+    position: absolute;
+    top: 1080px;
+    right: -10px;
+    width: 170px;
+}
+
+.ellipse--spielberg-bio {
+    position: absolute;
+    top: 2080px;
+    right: 10px;
+    width: 109px;
+}
+
+.ellipse--spielberg-style {
+    position: absolute;
+    top: 2960px;
+    left: 10px;
+    width: 109px;
+}
+
+.ellipse--livre1 {
+    position: absolute;
+    top: 1440px;
+    right: 25px;
+    width: 150px;
+}
+
+.ellipse--livre2 {
+    position: absolute;
+    top: 1680px;
+    left: 25px;
+    width: 150px;
+}
+
+.ellipse--virk {
+    position: absolute;
+    top: 2890px;
+    right: 10px;
+    width: 109px;
+}
+
+.ellipse--silvestri {
+    position: absolute;
+    top: 2210px;
+    right: 10px;
+    width: 109px;
+}
+
+.ellipse--img-ville {
+    position: absolute;
+    top: 1685px;
+    left: 10px;
+    width: 109px;
+}
+
+.ellipse--img-distopie {
+    position: absolute;
+    top: 2355px;
+    right: 10px;
+    width: 109px;
+}
+
+.ellipse--img-multivers {
+    position: absolute;
+    top: 3055px;
+    left: 10px;
+    width: 109px;
 }

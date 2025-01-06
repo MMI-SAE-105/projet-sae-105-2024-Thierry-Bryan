@@ -27,3 +27,13 @@ if (prevButton) {
 prevButton.addEventListener('click', () => {
   carouselContainer.scrollBy({ left: -300, behavior: 'smooth' });
 });}
+
+
+const cards = document.querySelectorAll('.carousel__item');
+
+// Ajoute un écouteur d'événement sur chaque carte
+cards.forEach((card) => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('flipped'); // Ajoute/enlève la classe 'flipped' au clic
+  });
+});
