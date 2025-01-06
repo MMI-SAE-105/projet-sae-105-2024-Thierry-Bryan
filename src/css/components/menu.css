@@ -188,3 +188,7 @@
     z-index: -1;
     top: -850px;
 }
+
+body.noscroll {
+    overflow: hidden;
+}

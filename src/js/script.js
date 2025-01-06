@@ -31,9 +31,8 @@ prevButton.addEventListener('click', () => {
 
 const cards = document.querySelectorAll('.carousel-card');
 
-// Ajoute un écouteur d'événement sur chaque carte
 cards.forEach((card) => {
   card.addEventListener('click', () => {
-    card.classList.toggle('flipped'); // Ajoute/enlève la classe 'flipped' au clic
+    card.classList.toggle('flipped');
   });
 });
