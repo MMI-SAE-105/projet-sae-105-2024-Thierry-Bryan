@@ -29,7 +29,7 @@ prevButton.addEventListener('click', () => {
 });}
 
 
-const cards = document.querySelectorAll('.carousel__item');
+const cards = document.querySelectorAll('.carousel-card');
 
 // Ajoute un écouteur d'événement sur chaque carte
 cards.forEach((card) => {
