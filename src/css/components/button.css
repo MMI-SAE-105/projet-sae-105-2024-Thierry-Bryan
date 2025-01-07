@@ -1,37 +1,36 @@
 .button {
-    margin-top: 20px;
-    flex-direction: column;
-    display: inline-block;
-    padding: 1.2px;
-    background: linear-gradient(45deg, var(--bleu), var(--rose));
-    border-radius: 20px;
+  margin-top: 20px;
+  flex-direction: column;
+  display: inline-block;
+  padding: 1.2px;
+  background: linear-gradient(45deg, var(--bleu), var(--rose));
+  border-radius: 20px;
 }
 
 .button-link {
-    display: inline-flex;
-    padding: 20px 37px;
-    background-color: var(--blanc);
-    text-decoration: none;
-    font-family: var(--font-secondary);
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 1.08px;
-    text-align: center;
-    color: var(--noir);
-    font-weight: bold;
-    border-radius: 19px;
-    transition: color 0.3s ease;
+  display: inline-flex;
+  padding: 20px 37px;
+  background-color: var(--blanc);
+  text-decoration: none;
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.08px;
+  text-align: center;
+  color: var(--noir); 
+  border-radius: 19px;
+  position: relative; 
+  transition: all 0.3s ease;
 }
 
 .button-link:hover {
-    color: var(--blanc) !important;
+  background: linear-gradient(90deg, var(--rose), var(--bleu-cyan));
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  text-fill-color: transparent; 
 }
 
-/*background: linear-gradient(90deg, var(--rose), var(--bleu-cyan));
--webkit-background-clip: text;
-color: transparent;*/
 button {
     border: none;
 }

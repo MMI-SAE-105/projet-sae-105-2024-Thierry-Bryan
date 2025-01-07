@@ -38,8 +38,11 @@
     position: absolute;
     z-index: 1;
     top: 880px;
-    width: 50.991px;
-    height: auto;
+    height: 50px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
 }
 
 .hero__ellipse {

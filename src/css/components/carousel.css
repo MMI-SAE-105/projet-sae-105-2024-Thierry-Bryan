@@ -32,6 +32,9 @@
     margin-right: -24px;
     scroll-snap-type: none;
     overflow: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 .carousel__item {
@@ -46,7 +49,6 @@
     display: block;
     width: 100%;
     height: auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     
 }
 

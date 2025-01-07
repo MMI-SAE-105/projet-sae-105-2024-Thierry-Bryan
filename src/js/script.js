@@ -36,3 +36,34 @@ cards.forEach((card) => {
     card.classList.toggle('flipped');
   });
 });
+
+const arrow = document.getElementById("hero__fleche");
+
+// Ajoutez un événement de clic
+arrow.addEventListener("click", () => {
+    window.scrollBy({
+        top: 840, // Ajustez le nombre de pixels à descendre
+        behavior: "smooth" // Ajoutez un effet de défilement fluide
+    });
+});
+
+
+// Sélectionner tous les boutons avec la classe "button-link"
+const buttons = document.querySelectorAll(".button-link");
+
+// Ajouter des événements "mouseover" et "mouseout" pour chaque bouton
+buttons.forEach((button) => {
+  button.addEventListener("mouseover", () => {
+    // Appliquer le gradient au texte
+    button.style.setProperty("background", "linear-gradient(90deg, var(--rose), var(--bleu-cyan))");    button.style.webkitBackgroundClip = "text"; // Support pour WebKit (Chrome, Safari)
+    button.style.webkitTextFillColor = "transparent"; // Support pour WebKit
+    button.style.color = "transparent"; // Fallback pour d'autres navigateurs
+  });
+
+  button.addEventListener("mouseout", () => {
+    // Réinitialiser les styles au survol
+    button.style.background = "none";
+    button.style.webkitTextFillColor = "var(--noir)";
+    button.style.color = "var(--noir)";
+  });
+});
