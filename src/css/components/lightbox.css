@@ -1,0 +1,74 @@
+/**
+* Lightbox
+*/
+
+#lightbox {
+    position: fixed;
+    padding: 30px;
+    background: var(--blanc);
+    border: 10px solid var(--rouge);
+    border-radius: 20px;
+    overflow: visible;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+    margin-top: -700px;
+}
+
+#lightbox::backdrop {
+    background: rgba(72, 4, 4, 0.911);
+}
+
+#lightbox::before {
+    content: 'X';
+    display: flex;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: #06328f;
+    width: 40px;
+    height: 40px;
+    place-content: center;
+    background-color: #ffffff;
+    line-height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+
+}
+
+
+#lightbox.open {
+    display: block;
+    animation: opening 0.5s forwards;
+}
+
+#lightbox.close {
+    display: block;
+    animation: closing 0.5s forwards;
+}
+
+@keyframes opening {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes closing {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+}

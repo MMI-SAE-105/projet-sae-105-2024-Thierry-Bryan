@@ -67,3 +67,39 @@ buttons.forEach((button) => {
     button.style.color = "var(--noir)";
   });
 });
+
+//Light BOX
+const lightbox = document.querySelector('#lightbox');
+const listThumbnail = document.querySelectorAll("[data-full-img]");
+const lightboxImg = document.querySelector('#lightbox img');
+
+listThumbnail.forEach((thumbnail) => {
+    thumbnail.addEventListener('click', (evt) => {
+        lightboxImg.src = thumbnail.dataset.fullImg;
+        lightbox.classList.add('open');
+        lightbox.classList.remove('close');
+    });
+});
+
+lightbox.addEventListener('click', () => {
+    lightbox.classList.add('close');
+    lightbox.classList.remove('open');
+    setTimeout(() => {
+        lightbox.close();
+    }, 700); 
+});
+
+const swipper = new Swiper('.card-wrapper', {
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

@@ -49,3 +49,21 @@
     width: 90%;
 }
 
+.card-item {
+    list-style: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    transition: 0.2 ease;
+}
+
+.card-link {
+    list-style: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    transition: 0.2 ease;
+    width: 10px;
+}
+
+.card-link:hover {
+    border: blue;
+}
