@@ -1,4 +1,4 @@
-// MENU
+// MEN
 const toggle = document.querySelector(".menu-btn, .menu-btn--page");
 const nav = document.querySelector(".menu");
 const page = document.body;
@@ -28,8 +28,8 @@ const itemWidth = items[0].offsetWidth;
 const middleIndex = Math.floor(items.length / 2); // Index de l'image du milieu
 let middlePosition = middleIndex * itemWidth; // Position à atteindre pour centrer
 
-// Appliquer un décalage 
-const offset = -itemWidth / 5; 
+// Appliquer un décalage (par exemple, pour compenser des marges ou paddings)
+const offset = -itemWidth / 5; // Ajuste cette valeur pour ton besoin (négatif = à gauche)
 middlePosition += offset;
 
 // Déplacer le carousel pour centrer l'image du milieu au démarrage
@@ -46,7 +46,15 @@ if (prevButton) {
   });
 }
 
-// FLECHE
+//CARD
+const cards = document.querySelectorAll('.carousel-card');
+
+cards.forEach((card) => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('flipped');
+  });
+});
+
 const arrow = document.getElementById("hero__fleche");
 
 // Ajoutez un événement de clic
@@ -57,7 +65,8 @@ arrow.addEventListener("click", () => {
     });
 });
 
-// BOUTON
+
+// Sélectionner tous les boutons avec la classe "button-link"
 const buttons = document.querySelectorAll(".button-link");
 
 // Ajouter des événements "mouseover" et "mouseout" pour chaque bouton
@@ -77,7 +86,7 @@ buttons.forEach((button) => {
   });
 });
 
-//LIGHTBOX
+//Light BOX
 const lightbox = document.querySelector('#lightbox');
 const listThumbnail = document.querySelectorAll("[data-full-img]");
 const lightboxImg = document.querySelector('#lightbox img');
@@ -96,4 +105,19 @@ lightbox.addEventListener('click', () => {
     setTimeout(() => {
         lightbox.close();
     }, 700); 
+});
+
+const swipper = new Swiper('.card-wrapper', {
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
