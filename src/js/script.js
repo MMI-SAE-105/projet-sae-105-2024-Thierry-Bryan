@@ -1,4 +1,4 @@
-// On cible les éléments à modifier
+// MENU
 const toggle = document.querySelector(".menu-btn, .menu-btn--page");
 const nav = document.querySelector(".menu");
 const page = document.body;
@@ -15,28 +15,38 @@ if (toggle && nav) {
   });
 } 
 
+//CAROUSEL
 const nextButton = document.querySelector('.carousel__button--next');
 const prevButton = document.querySelector('.carousel__button--prev');
 const carouselContainer = document.querySelector('.carousel__container');
+const items = document.querySelectorAll('.carousel__item');
 
-if (nextButton){
-nextButton.addEventListener('click', () => {
-  carouselContainer.scrollBy({ left: 300, behavior: 'smooth' });
-});}
-if (prevButton) {
-prevButton.addEventListener('click', () => {
-  carouselContainer.scrollBy({ left: -300, behavior: 'smooth' });
-});}
+// Fonction pour calculer la largeur d'un item
+const itemWidth = items[0].offsetWidth;
 
+// Calculer la position du carousel pour centrer sur l'image du milieu
+const middleIndex = Math.floor(items.length / 2); // Index de l'image du milieu
+let middlePosition = middleIndex * itemWidth; // Position à atteindre pour centrer
 
-const cards = document.querySelectorAll('.carousel-card');
+// Appliquer un décalage 
+const offset = -itemWidth / 5; 
+middlePosition += offset;
 
-cards.forEach((card) => {
-  card.addEventListener('click', () => {
-    card.classList.toggle('flipped');
+// Déplacer le carousel pour centrer l'image du milieu au démarrage
+carouselContainer.scrollLeft = middlePosition;
+
+if (nextButton) {
+  nextButton.addEventListener('click', () => {
+    carouselContainer.scrollBy({ left: itemWidth, behavior: 'smooth' });
   });
-});
+}
+if (prevButton) {
+  prevButton.addEventListener('click', () => {
+    carouselContainer.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+  });
+}
 
+// FLECHE
 const arrow = document.getElementById("hero__fleche");
 
 // Ajoutez un événement de clic
@@ -47,8 +57,7 @@ arrow.addEventListener("click", () => {
     });
 });
 
-
-// Sélectionner tous les boutons avec la classe "button-link"
+// BOUTON
 const buttons = document.querySelectorAll(".button-link");
 
 // Ajouter des événements "mouseover" et "mouseout" pour chaque bouton
@@ -68,7 +77,7 @@ buttons.forEach((button) => {
   });
 });
 
-//Light BOX
+//LIGHTBOX
 const lightbox = document.querySelector('#lightbox');
 const listThumbnail = document.querySelectorAll("[data-full-img]");
 const lightboxImg = document.querySelector('#lightbox img');
@@ -87,19 +96,4 @@ lightbox.addEventListener('click', () => {
     setTimeout(() => {
         lightbox.close();
     }, 700); 
-});
-
-const swipper = new Swiper('.card-wrapper', {
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
 });
