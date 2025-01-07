@@ -47,6 +47,7 @@ if (prevButton) {
 }
 
 //CARD
+
 const cards = document.querySelectorAll('.carousel-card');
 
 cards.forEach((card) => {
@@ -121,3 +122,5 @@ const swipper = new Swiper('.card-wrapper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+
