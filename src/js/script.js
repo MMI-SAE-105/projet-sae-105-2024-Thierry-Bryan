@@ -15,13 +15,7 @@ if (toggle && nav) {
   });
 } 
 
-//FLECHE
-document.getElementById("hero__fleche").addEventListener("click", () => {
-    window.scrollBy({
-        top: 830, // Le nombre de pixels à descendre (ajustez selon vos besoins)
-        behavior: "smooth" // Défilement fluide
-    });
-});
+
 
 //CAROUSEL
 const nextButton = document.querySelector('.carousel__button--next');
@@ -30,7 +24,9 @@ const carouselContainer = document.querySelector('.carousel__container');
 const items = document.querySelectorAll('.carousel__item');
 
 // Fonction pour calculer la largeur d'un item
-const itemWidth = items[0].offsetWidth;
+
+if (items.length > 0) {
+    const itemWidth = items[0].offsetWidth;
 
 // Calculer la position du carousel pour centrer sur l'image du milieu
 const middleIndex = Math.floor(items.length / 2); // Index de l'image du milieu
@@ -54,6 +50,10 @@ if (prevButton) {
   });
 }
 
+} else {
+    console.error("Aucun élément carousel trouvé.");
+}
+
 //CARD
 
 const cards = document.querySelectorAll('.carousel-card');
@@ -72,6 +72,35 @@ arrow.addEventListener("click", () => {
         top: 840, // Ajustez le nombre de pixels à descendre
         behavior: "smooth" // Ajoutez un effet de défilement fluide
     });
+});
+
+//FLECHE
+document.getElementById("hero__fleche").addEventListener("click", () => {
+    window.scrollBy({
+        top: 830, // Le nombre de pixels à descendre (ajustez selon vos besoins)
+        behavior: "smooth" // Défilement fluide
+    });
+});
+
+//Light BOX
+const lightbox = document.querySelector('#lightbox');
+const listThumbnail = document.querySelectorAll("[data-full-img]");
+const lightboxImg = document.querySelector('#lightbox img');
+
+listThumbnail.forEach((thumbnail) => {
+    thumbnail.addEventListener('click', (evt) => {
+        lightboxImg.src = thumbnail.dataset.fullImg;
+        lightbox.classList.add('open');
+        lightbox.classList.remove('close');
+    });
+});
+
+lightbox.addEventListener('click', () => {
+    lightbox.classList.add('close');
+    lightbox.classList.remove('open');
+    setTimeout(() => {
+        lightbox.close();
+    }, 700); 
 });
 
 
@@ -95,26 +124,7 @@ buttons.forEach((button) => {
   });
 });
 
-//Light BOX
-const lightbox = document.querySelector('#lightbox');
-const listThumbnail = document.querySelectorAll("[data-full-img]");
-const lightboxImg = document.querySelector('#lightbox img');
 
-listThumbnail.forEach((thumbnail) => {
-    thumbnail.addEventListener('click', (evt) => {
-        lightboxImg.src = thumbnail.dataset.fullImg;
-        lightbox.classList.add('open');
-        lightbox.classList.remove('close');
-    });
-});
-
-lightbox.addEventListener('click', () => {
-    lightbox.classList.add('close');
-    lightbox.classList.remove('open');
-    setTimeout(() => {
-        lightbox.close();
-    }, 700); 
-});
 
 const swipper = new Swiper('.card-wrapper', {
   loop: true,
