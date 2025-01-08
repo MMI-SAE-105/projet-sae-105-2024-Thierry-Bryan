@@ -15,6 +15,14 @@ if (toggle && nav) {
   });
 } 
 
+//FLECHE
+document.getElementById("hero__fleche").addEventListener("click", () => {
+    window.scrollBy({
+        top: 830, // Le nombre de pixels à descendre (ajustez selon vos besoins)
+        behavior: "smooth" // Défilement fluide
+    });
+});
+
 //CAROUSEL
 const nextButton = document.querySelector('.carousel__button--next');
 const prevButton = document.querySelector('.carousel__button--prev');
@@ -122,5 +130,4 @@ const swipper = new Swiper('.card-wrapper', {
     prevEl: '.swiper-button-prev',
   },
 });
-
 

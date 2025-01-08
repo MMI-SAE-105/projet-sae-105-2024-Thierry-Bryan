@@ -110,3 +110,8 @@ footer {
     top: -520px;
     margin-bottom: -525px;
 }
+
+.footer__title-link {
+    text-decoration: none;
+    color: inherit;
+}
