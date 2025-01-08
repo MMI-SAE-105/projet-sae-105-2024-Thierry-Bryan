@@ -14,22 +14,24 @@
 
 .header--page {
     display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 15px;
-    margin-bottom: 0px;
-    background-color: var(--Header-blanc);
-    padding-top: 50px;
-    gap: 260px;
-    right: 0;
-    left: 0;
-    z-index: 10;
+        position: fixed;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 15px;
+        margin-bottom: 0px;
+        background-color: var(--Header-blanc);
+        padding-top: 50px;
+        gap: 260px;
+        right: 0;
+        left: 0;
+        z-index: 10;
 }
+
+
 
 .header__line {
     position: absolute;
-    width: 343px;
+    width: 90%;
     max-width: 100%;
     height: 3px;
     background-color: var(--noir);

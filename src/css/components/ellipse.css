@@ -8,7 +8,7 @@
     top: 1530px;
     right: 10px;
     width: 109px;
-    visibility: hidden;
+
 }
 
 .ellipse--ready-player-one-spielberg {
@@ -16,7 +16,7 @@
     top: 2300px;
     left: 10px;
     width: 109px;
-    visibility: hidden;
+
 }
 
 .ellipse--ready-player-one-musique {
@@ -24,7 +24,6 @@
     top: 2990px;
     right: 10px;
     width: 109px;
-    visibility: hidden;
 }
 
 .ellipse--casque1974 {
