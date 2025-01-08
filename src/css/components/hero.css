@@ -29,9 +29,8 @@
     position: absolute;
     z-index: 1;
     top: 365px;
-    width: 380px;
-    height: 292px;
-    padding-left: 50px;
+    width: 335px;
+    height: auto;
     animation: bounce 2s infinite;
 }
 
