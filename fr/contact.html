@@ -6,7 +6,11 @@
     <title>Omni Sphere</title>
     <link rel="stylesheet" href="/src/css/style.css" />
     <script type="module" src="/src/js/script.js"></script>
-    <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-omnisphere.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/img/favicon/favicon-omnisphere.png"
+    />
   </head>
   <body>
     <header class="header--page">
@@ -149,6 +153,7 @@
           un message directement :
         </p>
         <section class="contact">
+          <h2 class="contact__title">Formulaire de Contact</h2>
           <form action="#" method="post" class="contact__form">
             <div class="contact__group">
               <label for="name" class="contact__label"
@@ -176,8 +181,8 @@
               >
               <input
                 type="text"
-                id="name"
-                name="name"
+                id="prenom"
+                name="prenom"
                 class="contact__input"
                 placeholder="Entrez votre nom"
                 required
@@ -188,8 +193,8 @@
               <label for="email" class="contact__label">Email</label>
               <input
                 type="email"
-                id="request-type"
-                name="request-type"
+                id="email"
+                name="email"
                 class="contact__input"
                 placeholder="Entrez votre adresse email"
               />
@@ -207,9 +212,7 @@
             </div>
             <div class="button__container--contact">
               <div class="button">
-                <button type="submit" class="button-link">
-                  ENVOYER
-                </button>
+                <button type="submit" class="button-link">ENVOYER</button>
               </div>
             </div>
           </form>
@@ -217,7 +220,9 @@
       </div>
     </main>
     <footer class="footer">
-      <h4 class="footer__title"><a class="footer__title-link" href="/fr/index.html">OmniSphère.</a></h4>
+      <h4 class="footer__title">
+        <a class="footer__title-link" href="/fr/index.html">OmniSphère.</a>
+      </h4>
       <div class="footer__links">
         <ul class="footer__list">
           <li class="footer__item">

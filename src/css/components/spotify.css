@@ -1,7 +1,4 @@
-<iframe class="spotify-embed"
-src="https://open.spotify.com/embed/track/7pwCxGp8lFfhPfsg88tVC6?utm_source=generator"
-height="152"
-allowfullscreen=""
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-loading="lazy"
-></iframe>
+.content__spotify-iframe {
+    width :100%;
+    
+}
