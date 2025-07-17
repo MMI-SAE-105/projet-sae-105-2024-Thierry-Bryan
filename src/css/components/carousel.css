@@ -5,6 +5,8 @@
     justify-content: center;
     margin: 16px;
     z-index: 0;
+    max-width: 390px;
+    margin: 16px auto;
 }
 
 .carousel__button {
@@ -28,18 +30,17 @@
     display: flex;
     gap: 16px;
     overflow-x: scroll;
-    scroll-snap-type: none;
-    overflow: hidden;
-    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    max-width: 390px;
+    margin: 0 auto;
 }
 
 .carousel__item {
-    flex: 1 0 260px;
+    flex: 1 0 180px;
     align-items: center;
     flex-shrink: 0;
-    width: 100%;
+    width: 180px;
     box-sizing: border-box;
 }
 

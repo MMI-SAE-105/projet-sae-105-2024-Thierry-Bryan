@@ -23,6 +23,7 @@
 @import "components/intro.css";
 @import "components/lightbox.css";
 @import "components/menu.css";
+@import "components/mobile-message.css";
 @import "components/hook.css";
 @import "components/content.css";
 @import "components/quote.css";
@@ -34,3 +35,4 @@
 @import "components/contact.css";
 @import "components/ellipse.css";
 @import "components/spotify.css";
+@import "components/mobile-enhancements.css";

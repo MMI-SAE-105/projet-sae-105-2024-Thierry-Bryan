@@ -1,0 +1,223 @@
+/* MESSAGE D'ACCUEIL MOBILE */
+.mobile-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--violet) 0%, var(--noir) 100%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.8s ease-in-out;
+}
+
+.mobile-message.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.mobile-message__content {
+    text-align: center;
+    color: var(--blanc);
+    max-width: 500px;
+    max-height: 90vh;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Style pour la scrollbar */
+.mobile-message__content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.mobile-message__content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.mobile-message__content::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, var(--rose), var(--bleu-cyan));
+    border-radius: 10px;
+}
+
+.mobile-message__content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, var(--bleu-cyan), var(--rose));
+}
+
+.mobile-message__logo {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(1);
+}
+
+.mobile-message__title {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, var(--rose), var(--bleu-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.mobile-message__subtitle {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.mobile-message__text {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.mobile-message__instructions {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.mobile-message__step {
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-message__step:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-message__step-number {
+    background: linear-gradient(90deg, var(--rose), var(--bleu-cyan));
+    color: var(--blanc);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.mobile-message__buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mobile-message__button {
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.mobile-message__button--primary {
+    background: linear-gradient(90deg, var(--rose), var(--bleu-cyan));
+    color: var(--blanc);
+}
+
+.mobile-message__button--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-message__button--secondary {
+    background: transparent;
+    color: var(--blanc);
+    border: 2px solid var(--blanc);
+}
+
+.mobile-message__button--secondary:hover {
+    background: var(--blanc);
+    color: var(--violet);
+    transform: translateY(-2px);
+}
+
+.mobile-message__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--blanc);
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.mobile-message__close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+/* Animation d'apparition */
+.mobile-message__content {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive - Masquer sur mobile et tablette */
+@media (max-width: 768px) {
+    .mobile-message {
+        display: none !important;
+    }
+}

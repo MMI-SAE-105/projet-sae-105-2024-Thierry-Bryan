@@ -2,3 +2,38 @@ img, video {
     width: 100%;
     height: auto;
 }
+
+/* Effet mobile avec marges blanches */
+html {
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 390px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Assure que tous les éléments respectent la largeur mobile */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Prévient les débordements */
+img, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Force tous les conteneurs à respecter la largeur */
+.container, .content, .card, .intro, .hero, .footer, .carousel, .menu {
+    max-width: 390px;
+    overflow-x: hidden;
+}

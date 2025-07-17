@@ -1,26 +1,32 @@
 .button {
-  margin-top: 20px;
+  margin-top: 15px;
   flex-direction: column;
-  display: inline-block;
+  display: block;
   padding: 1.2px;
   background: linear-gradient(45deg, var(--bleu), var(--rose));
   border-radius: 20px;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-link {
   display: inline-flex;
-  padding: 20px 37px;
+  padding: 15px 25px;
   background-color: var(--blanc);
   text-decoration: none;
   font-family: var(--font-secondary);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
-  letter-spacing: 1.08px;
+  letter-spacing: 0.8px;
   text-align: center;
   color: var(--noir); 
   border-radius: 19px;
   position: relative; 
   transition: all 0.3s ease;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .button-link:hover {
@@ -28,7 +34,6 @@
   -webkit-background-clip: text; 
   background-clip: text; 
   -webkit-text-fill-color: transparent; 
-  text-fill-color: transparent; 
 }
 
 button {
@@ -38,4 +43,5 @@ button {
 .button__container--contact {
     display: flex;
     justify-content: center;
+    padding: 0 20px;
 }

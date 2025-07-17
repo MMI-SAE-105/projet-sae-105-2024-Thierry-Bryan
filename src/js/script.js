@@ -1,3 +1,119 @@
+// MESSAGE MOBILE POUR PC
+function initMobileMessage() {
+    // Vérifier si on est sur PC (largeur > 768px)
+    if (window.innerWidth > 768) {
+        // Vérifier si l'utilisateur a déjà vu le message (expire après 1 jour)
+        const messageData = localStorage.getItem('omnisphere-mobile-message');
+        const oneDayAgo = Date.now() - (24 * 60 * 60 * 1000);
+        
+        if (!messageData || JSON.parse(messageData).timestamp < oneDayAgo) {
+            // Créer le message d'accueil
+            const mobileMessage = document.createElement('div');
+            mobileMessage.className = 'mobile-message';
+            mobileMessage.innerHTML = `
+                <div class="mobile-message__content">
+                    <button class="mobile-message__close" onclick="closeMobileMessage()">×</button>
+                    <img src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg" alt="Logo Omnisphere" class="mobile-message__logo">
+                    <h1 class="mobile-message__title">Omnisphere</h1>
+                    <h2 class="mobile-message__subtitle">Expérience optimisée pour mobile</h2>
+                    <p class="mobile-message__text">
+                        Ce site est conçu pour offrir une expérience immersive en format mobile. 
+                        Activez le mode responsive pour une navigation optimale !
+                    </p>
+                    <div class="mobile-message__instructions">
+                        <div class="mobile-message__step">
+                            <span class="mobile-message__step-number">1</span>
+                            <span>Appuyez sur <strong>F12</strong> ou <strong>Ctrl+Shift+I</strong></span>
+                        </div>
+                        <div class="mobile-message__step">
+                            <span class="mobile-message__step-number">2</span>
+                            <span>Cliquez sur l'icône <strong>📱 responsive</strong></span>
+                        </div>
+                        <div class="mobile-message__step">
+                            <span class="mobile-message__step-number">3</span>
+                            <span>Sélectionnez <strong>iPhone</strong> ou <strong>390px</strong></span>
+                        </div>
+                    </div>
+                    <div class="mobile-message__buttons">
+                        <button class="mobile-message__button mobile-message__button--primary" onclick="openDevTools()">
+                            📱 Mode mobile
+                        </button>
+                        <button class="mobile-message__button mobile-message__button--secondary" onclick="continuePc()">
+                            💻 Continuer ici
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            // Ajouter le message au body
+            document.body.appendChild(mobileMessage);
+            
+            // Bloquer le scroll
+            document.body.style.overflow = 'hidden';
+            
+            // SUPPRESSION DE L'AUTO-FERMETURE
+            // Le message reste affiché jusqu'à ce que l'utilisateur interagisse
+        }
+    }
+}
+
+function closeMobileMessage() {
+    const mobileMessage = document.querySelector('.mobile-message');
+    if (mobileMessage) {
+        mobileMessage.classList.add('hidden');
+        document.body.style.overflow = '';
+        
+        // Marquer comme vu dans localStorage avec timestamp
+        const messageData = {
+            seen: true,
+            timestamp: Date.now()
+        };
+        localStorage.setItem('omnisphere-mobile-message', JSON.stringify(messageData));
+        
+        // Supprimer l'élément après l'animation
+        setTimeout(() => {
+            if (mobileMessage.parentNode) {
+                mobileMessage.remove();
+            }
+        }, 800);
+    }
+}
+
+function openDevTools() {
+    // Message plus informatif pour les instructions
+    const instructions = `
+Pour activer le mode mobile :
+
+1. Ouvrez les outils de développement (F12)
+2. Cliquez sur l'icône responsive/mobile (📱)
+3. Sélectionnez "iPhone" ou définissez la largeur à 390px
+4. Rafraîchissez la page pour une expérience optimale
+
+Le site est conçu pour une largeur de 390px !
+    `;
+    
+    alert(instructions);
+    closeMobileMessage();
+}
+
+function continuePc() {
+    closeMobileMessage();
+}
+
+// Réinitialiser le message si l'utilisateur redimensionne la fenêtre
+window.addEventListener('resize', () => {
+    if (window.innerWidth <= 768) {
+        closeMobileMessage();
+    }
+});
+
+// Initialiser le message au chargement de la page
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMessage);
+} else {
+    initMobileMessage();
+}
+
 // MEN
 const toggle = document.querySelector(".menu-btn, .menu-btn--page");
 const nav = document.querySelector(".menu");
@@ -26,29 +142,40 @@ const items = document.querySelectorAll('.carousel__item');
 // Fonction pour calculer la largeur d'un item
 
 if (items.length > 0) {
-    const itemWidth = items[0].offsetWidth;
+    // Fonction pour recalculer la largeur d'un item dynamiquement
+    function getItemWidth() {
+        return items[0].offsetWidth + 16; // +16 pour le gap
+    }
 
-// Calculer la position du carousel pour centrer sur l'image du milieu
-const middleIndex = Math.floor(items.length / 2); // Index de l'image du milieu
-let middlePosition = middleIndex * itemWidth; // Position à atteindre pour centrer
+    // Calculer la position du carousel pour centrer sur l'image du milieu
+    function centerCarousel() {
+        const itemWidth = getItemWidth();
+        const middleIndex = Math.floor(items.length / 2); // Index de l'image du milieu
+        let middlePosition = middleIndex * itemWidth; // Position à atteindre pour centrer
 
-// Appliquer un décalage (par exemple, pour compenser des marges ou paddings)
-const offset = -itemWidth / 5; // Ajuste cette valeur pour ton besoin (négatif = à gauche)
-middlePosition += offset;
+        // Appliquer un décalage (par exemple, pour compenser des marges ou paddings)
+        const offset = -itemWidth / 5; // Ajuste cette valeur pour ton besoin (négatif = à gauche)
+        middlePosition += offset;
 
-// Déplacer le carousel pour centrer l'image du milieu au démarrage
-carouselContainer.scrollLeft = middlePosition;
+        // Déplacer le carousel pour centrer l'image du milieu au démarrage
+        carouselContainer.scrollLeft = middlePosition;
+    }
 
-if (nextButton) {
-  nextButton.addEventListener('click', () => {
-    carouselContainer.scrollBy({ left: itemWidth, behavior: 'smooth' });
-  });
-}
-if (prevButton) {
-  prevButton.addEventListener('click', () => {
-    carouselContainer.scrollBy({ left: -itemWidth, behavior: 'smooth' });
-  });
-}
+    // Centrer le carousel au démarrage
+    centerCarousel();
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            const itemWidth = getItemWidth();
+            carouselContainer.scrollBy({ left: itemWidth, behavior: 'smooth' });
+        });
+    }
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            const itemWidth = getItemWidth();
+            carouselContainer.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+        });
+    }
 
 } else {
     console.error("Aucun élément carousel trouvé.");
