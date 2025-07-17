@@ -17,7 +17,7 @@ function initMobileMessage() {
                     <h2 class="mobile-message__subtitle">Expérience optimisée pour mobile</h2>
                     <p class="mobile-message__text">
                         Ce site est conçu pour offrir une expérience immersive en format mobile. 
-                        Activez le mode responsive pour une navigation optimale !
+                        Activez le mode responsive pour une navigation optimale ou <strong>utilisez directement votre téléphone</strong> pour une meilleure expérience !
                     </p>
                     <div class="mobile-message__instructions">
                         <div class="mobile-message__step">

@@ -3,6 +3,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero__title {
@@ -11,82 +13,105 @@
     position: absolute;
     color: var(--blanc);
     font-family: var(--font-secondary);
-    font-size: 60px;
+    font-size: 32px; /* Réduit pour mobile */
     font-style: normal;
     font-weight: 400;
     line-height: 110%;
-    top: 260px;
+    top: 200px; /* Ajusté pour mobile */
     z-index: 2;
-    padding-left: 30px;
-    
+    padding-left: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 390px;
 }
 
 .hero__background {
     z-index: 0;
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    object-fit: cover;
 }
 
 .hero__casque {
     position: absolute;
     z-index: 1;
-    top: 365px;
-    width: 335px;
+    top: 280px; /* Ajusté pour mobile */
+    width: 250px; /* Réduit pour mobile */
     height: auto;
     animation: bounce 2s infinite;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @keyframes bounce {
     0%,
     50% {
-        transform: translateY(0);
-        /* Position initiale */
+        transform: translateX(-50%) translateY(0);
     }
-
     50% {
-        transform: translateY(10px);
-        /* Le casque descend de 10px */
+        transform: translateX(-50%) translateY(10px);
     }
 }
-
-
 
 .hero__fleche {
     position: absolute;
     z-index: 1;
-    top: 835px;
+    top: 600px; /* Ajusté pour mobile */
     height: 50px;
-    bottom: 20px;
-    left: 45%;
+    left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
     animation: bounce-arrows 1.5s infinite;
 }
 
 @keyframes bounce-arrows {
-
     0%,
     100% {
-        transform: translateY(0);
-        /* Position initiale */
+        transform: translateX(-50%) translateY(0);
     }
-
     50% {
-        transform: translateY(10px);
-        /* La flèche descend de 10px */
+        transform: translateX(-50%) translateY(10px);
     }
 }
-
 
 .hero__ellipse {
     display: flex;
     position: absolute;
     z-index: 10;
-    width: 150px;
-    height: 150px;
-    left: -70px;
-    top: -80px;
+    width: 120px; /* Réduit pour mobile */
+    height: 120px;
+    left: -50px; /* Ajusté pour mobile */
+    top: -60px; /* Ajusté pour mobile */
 }
 
 .hero__img {
-    margin-top: 110px;
-    margin-bottom: 30px;
+    margin-top: 80px; /* Ajusté pour mobile */
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Styles pour les pages (hero--page) */
+.hero--page {
+    position: relative;
+    min-height: 300px; /* Hauteur minimale pour les pages */
+}
+
+.hero--page .hero__img {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    display: block;
+}
+
+.hero--page .hero__ellipse {
+    width: 100px;
+    height: 100px;
+    left: -40px;
+    top: -50px;
 }
