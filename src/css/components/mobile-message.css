@@ -81,6 +81,7 @@
     font-weight: 400;
     margin-bottom: 20px;
     line-height: 1.4;
+    color: var(--blanc);
 }
 
 .mobile-message__text {

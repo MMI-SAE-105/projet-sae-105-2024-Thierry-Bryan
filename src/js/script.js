@@ -2,17 +2,16 @@
 function initMobileMessage() {
     // Vérifier si on est sur PC (largeur > 768px)
     if (window.innerWidth > 768) {
-        // Vérifier si l'utilisateur a déjà vu le message (expire après 1 jour)
-        const messageData = localStorage.getItem('omnisphere-mobile-message');
-        const oneDayAgo = Date.now() - (24 * 60 * 60 * 1000);
+        // Vérifier si l'utilisateur a déjà vu le message dans cette session
+        const hasSeenMessage = sessionStorage.getItem('omnisphere-mobile-message-seen');
         
-        if (!messageData || JSON.parse(messageData).timestamp < oneDayAgo) {
+        if (!hasSeenMessage) {
             // Créer le message d'accueil
             const mobileMessage = document.createElement('div');
             mobileMessage.className = 'mobile-message';
             mobileMessage.innerHTML = `
                 <div class="mobile-message__content">
-                    <button class="mobile-message__close" onclick="closeMobileMessage()">×</button>
+                    <button class="mobile-message__close" id="close-mobile-message">×</button>
                     <img src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg" alt="Logo Omnisphere" class="mobile-message__logo">
                     <h1 class="mobile-message__title">Omnisphere</h1>
                     <h2 class="mobile-message__subtitle">Expérience optimisée pour mobile</h2>
@@ -35,10 +34,10 @@ function initMobileMessage() {
                         </div>
                     </div>
                     <div class="mobile-message__buttons">
-                        <button class="mobile-message__button mobile-message__button--primary" onclick="openDevTools()">
+                        <button class="mobile-message__button mobile-message__button--primary" id="open-dev-tools">
                             📱 Mode mobile
                         </button>
-                        <button class="mobile-message__button mobile-message__button--secondary" onclick="continuePc()">
+                        <button class="mobile-message__button mobile-message__button--secondary" id="continue-pc">
                             💻 Continuer ici
                         </button>
                     </div>
@@ -51,8 +50,24 @@ function initMobileMessage() {
             // Bloquer le scroll
             document.body.style.overflow = 'hidden';
             
-            // SUPPRESSION DE L'AUTO-FERMETURE
-            // Le message reste affiché jusqu'à ce que l'utilisateur interagisse
+            // Ajouter les event listeners après que l'élément soit dans le DOM
+            setTimeout(() => {
+                const closeBtn = document.getElementById('close-mobile-message');
+                const devToolsBtn = document.getElementById('open-dev-tools');
+                const continuePcBtn = document.getElementById('continue-pc');
+                
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', closeMobileMessage);
+                }
+                
+                if (devToolsBtn) {
+                    devToolsBtn.addEventListener('click', openDevTools);
+                }
+                
+                if (continuePcBtn) {
+                    continuePcBtn.addEventListener('click', continuePc);
+                }
+            }, 100);
         }
     }
 }
@@ -63,12 +78,8 @@ function closeMobileMessage() {
         mobileMessage.classList.add('hidden');
         document.body.style.overflow = '';
         
-        // Marquer comme vu dans localStorage avec timestamp
-        const messageData = {
-            seen: true,
-            timestamp: Date.now()
-        };
-        localStorage.setItem('omnisphere-mobile-message', JSON.stringify(messageData));
+        // Marquer comme vu dans sessionStorage (pour cette session seulement)
+        sessionStorage.setItem('omnisphere-mobile-message-seen', 'true');
         
         // Supprimer l'élément après l'animation
         setTimeout(() => {
