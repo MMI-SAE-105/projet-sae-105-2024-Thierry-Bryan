@@ -2,10 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Omni Sphere - About</title>
-    <link rel="stylesheet" href="/src/css/style.css" />
-    <script type="module" src="/src/js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OmniSphère - About</title>
+    <meta name="description" content="Learn about OmniSphère, a project exploring the links between virtual reality, cinema, music and imagination." />
+    <link rel="canonical" href="https://omnisphere-1.netlify.app/en/about.html" />
+    <link rel="alternate" hreflang="en" href="https://omnisphere-1.netlify.app/en/about.html" />
+    <link rel="alternate" hreflang="fr" href="https://omnisphere-1.netlify.app/fr/a-propos.html" />
+    <link rel="alternate" hreflang="x-default" href="https://omnisphere-1.netlify.app/fr/index.html" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="OmniSphère - About" />
+    <meta property="og:description" content="Learn about OmniSphère, a project exploring the links between virtual reality, cinema, music and imagination." />
+    <meta property="og:url" content="https://omnisphere-1.netlify.app/en/about.html" />
+    <meta property="og:site_name" content="OmniSphère" />
+    <meta property="og:image" content="https://omnisphere-1.netlify.app/assets/img/hero/hero_accueil.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OmniSphère - About" />
+    <meta name="twitter:description" content="Learn about OmniSphère, a project exploring the links between virtual reality, cinema, music and imagination." />
+    <meta name="twitter:image" content="https://omnisphere-1.netlify.app/assets/img/hero/hero_accueil.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" /></noscript>
+    <link rel="preload" as="style" href="/src/css/bundle.min.css" />
+    <link rel="stylesheet" href="/src/css/bundle.min.css" />
+    <link rel="stylesheet" href="/src/css/print.css" media="print" />
+    <script type="module" src="/src/js/script.min.js"></script>
     <link
       rel="icon"
       type="image/png"
@@ -15,7 +37,7 @@
   <body>
     <header class="header--page">
       <a class="header__logoLink--page" href="/en/index.html">
-        <img
+        <img decoding="async"
           class="header__logo-img--page"
           src="/assets/img/icons/logo/logo_omni-sphere-noir.svg"
           alt="logo"
@@ -36,7 +58,7 @@
       <hr class="header__line" />
       <nav class="header__menu menu" id="mainNav" aria-hidden="true">
         <a class="menu__logo" href="/en/index.html"
-          ><img
+          ><img decoding="async" loading="lazy"
             src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg"
             alt="logo"
         /></a>
@@ -82,7 +104,7 @@
           <ul class="menu__social-list">
             <li class="menu__social-item">
               <span class="menu__social-link" aria-hidden="true">
-                <img
+                <img decoding="async" loading="lazy"
                   class="menu__social-icon"
                   src="/assets/img/icons/logo/logo_instagram.svg"
                   alt=""
@@ -91,7 +113,7 @@
             </li>
             <li class="menu__social-item">
               <span class="menu__social-link" aria-hidden="true">
-                <img
+                <img decoding="async" loading="lazy"
                   class="menu__social-icon"
                   src="/assets/img/icons/logo/logo_facebook.svg"
                   alt=""
@@ -100,21 +122,21 @@
             </li>
           </ul>
         </div>
-        <img
+        <img decoding="async" loading="lazy"
           class="menu__background"
           src="/assets/img/menu/menu-background.webp"
           alt=""
-        />
+        width="786" height="1704" />
       </nav>
     </header>
     <main>
       <div class="hero hero--page">
-        <img
+        <img loading="lazy" decoding="async"
           class="hero__ellipse"
           src="/assets/img/icons/ellipse2.webp"
           alt=""
-        />
-        <img class="hero__img" src="/assets/img/hero/hero_a-propos.webp" alt="About page illustration" />
+        width="380" height="380" />
+        <img fetchpriority="high" loading="eager" decoding="async" class="hero__img" srcset="/assets/img/hero/hero_a-propos-780.webp 780w, /assets/img/hero/hero_a-propos.webp 1179w" sizes="390px" src="/assets/img/hero/hero_a-propos.webp" alt="About page illustration" width="1179" height="1266" />
       </div>
       <div class="hook__line-container--top">
         <hr class="hook__line--top" />
@@ -127,9 +149,9 @@
         <hr class="hook__line--bottom" />
       </div>
       <div class="content">
-        <h2 class="content__title">OmniSphere.</h2>
+        <h2 class="content__title">OmniSph?re.</h2>
         <p class="content__text">
-          OmniSphere is a project exploring the boundary between virtual reality
+          OmniSph?re is a project exploring the boundary between virtual reality
           and the real world. Through articles and multimedia resources, it
           questions the consequences of technological advances, particularly
           virtual reality and artificial intelligence, in the near future.<br />I
@@ -177,7 +199,7 @@
       </div>
     </main>
     <footer class="footer">
-      <p class="footer__title"><a class="footer__title-link" href="/en/index.html">OmniSphere.</a></p>
+      <p class="footer__title"><a class="footer__title-link" href="/en/index.html">OmniSph?re.</a></p>
       <div class="footer__links">
         <ul class="footer__list">
           <li class="footer__item">
@@ -198,7 +220,7 @@
         <ul class="footer__social-list">
           <li class="footer__social-item">
             <span class="footer__social-link" aria-hidden="true">
-              <img
+              <img decoding="async" loading="lazy"
                 class="footer__social-icon"
                 src="/assets/img/icons/logo/logo_instagram.svg"
                 alt=""
@@ -207,7 +229,7 @@
           </li>
           <li class="footer__social-item">
             <span class="footer__social-link" aria-hidden="true">
-              <img
+              <img decoding="async" loading="lazy"
                 class="footer__social-icon"
                 src="/assets/img/icons/logo/logo_facebook.svg"
                 alt=""
@@ -219,7 +241,7 @@
       <div class="footer__legal">
         <p class="footer__legal-title">Legal Notice</p>
         <p class="footer__legal-text">
-          © 2024 OmniSphere. - Project carried out in 2024 as part of an
+          © 2024 OmniSph?re. - Project carried out in 2024 as part of an
           educational exercise at the department
           <a
             class="footer__legal-link"
@@ -228,11 +250,11 @@
           >
         </p>
       </div>
-      <img
+      <img decoding="async" loading="lazy"
         class="footer-background"
         src="/assets/img/footer/footer-background.webp"
         alt=""
-      />
+      width="786" height="964" />
     </footer>
   </body>
 </html>

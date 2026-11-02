@@ -128,6 +128,7 @@ footer {
 }
 
 .footer__title-link {
+    font-weight: bold;
     text-decoration: none;
     color: inherit;
 }

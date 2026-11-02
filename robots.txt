@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /fr/404.html
+Disallow: /en/404.html
+
+Sitemap: https://omnisphere-1.netlify.app/sitemap.xml

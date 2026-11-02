@@ -3,9 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omni Sphere - Accueil</title>
-    <link rel="stylesheet" href="/src/css/style.css" />
-    <script type="module" src="/src/js/script.js"></script>
+    <title>OmniSphère - Accueil</title>
+    <meta name="description" content="Explorez OmniSphère : un univers consacre a la realite virtuelle, au cinema, aux mondes numeriques et aux futurs imagines." />
+    <link rel="canonical" href="https://omnisphere-1.netlify.app/fr/index.html" />
+    <link rel="alternate" hreflang="fr" href="https://omnisphere-1.netlify.app/fr/index.html" />
+    <link rel="alternate" hreflang="en" href="https://omnisphere-1.netlify.app/en/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://omnisphere-1.netlify.app/fr/index.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="OmniSphère - Accueil" />
+    <meta property="og:description" content="Explorez OmniSphère : un univers consacre a la realite virtuelle, au cinema, aux mondes numeriques et aux futurs imagines." />
+    <meta property="og:url" content="https://omnisphere-1.netlify.app/fr/index.html" />
+    <meta property="og:site_name" content="OmniSphère" />
+    <meta property="og:image" content="https://omnisphere-1.netlify.app/assets/img/hero/hero_accueil.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OmniSphère - Accueil" />
+    <meta name="twitter:description" content="Explorez OmniSphère : un univers consacre a la realite virtuelle, au cinema, aux mondes numeriques et aux futurs imagines." />
+    <meta name="twitter:image" content="https://omnisphere-1.netlify.app/assets/img/hero/hero_accueil.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" /></noscript>
+    <link rel="preload" as="style" href="/src/css/bundle.min.css" />
+    <link rel="stylesheet" href="/src/css/bundle.min.css" />
+    <link rel="stylesheet" href="/src/css/print.css" media="print" />
+    <script type="module" src="/src/js/script.min.js"></script>
     <link
       rel="icon"
       type="image/png"
@@ -15,7 +37,7 @@
   <body>
     <header class="header">
       <a class="header__logoLink" href="/fr/index.html">
-        <img
+        <img decoding="async"
           class="header__logo-img"
           src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg"
           alt="logo"
@@ -34,7 +56,7 @@
       </div>
       <nav class="header__menu menu" id="mainNav" aria-hidden="true">
         <a class="menu__logo" href="/fr/index.html"
-          ><img
+          ><img decoding="async" loading="lazy"
             src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg"
             alt="logo"
         /></a>
@@ -80,7 +102,7 @@
           <ul class="menu__social-list">
             <li class="menu__social-item">
               <span class="menu__social-link" aria-hidden="true">
-                <img
+                <img decoding="async" loading="lazy"
                   class="menu__social-icon"
                   src="/assets/img/icons/logo/logo_instagram.svg"
                   alt=""
@@ -89,7 +111,7 @@
             </li>
             <li class="menu__social-item">
               <span class="menu__social-link" aria-hidden="true">
-                <img
+                <img decoding="async" loading="lazy"
                   class="menu__social-icon"
                   src="/assets/img/icons/logo/logo_facebook.svg"
                   alt=""
@@ -98,27 +120,27 @@
             </li>
           </ul>
         </div>
-        <img
+        <img decoding="async" loading="lazy"
           class="menu__background"
           src="/assets/img/menu/menu-background.webp"
           alt=""
-        />
+        width="786" height="1704" />
       </nav>
     </header>
     <main>
       <section class="hero">
-        <img
+        <img fetchpriority="high" loading="eager" decoding="async"
           class="hero__background"
-          src="/assets/img/hero/hero_accueil.webp"
+          srcset="/assets/img/hero/hero_accueil-780.webp 780w, /assets/img/hero/hero_accueil.webp 1179w" sizes="390px" src="/assets/img/hero/hero_accueil.webp"
           alt="fond accueil"
-        />
-        <img
+        width="1179" height="2652" />
+        <img fetchpriority="high" loading="eager" decoding="async"
           class="hero__casque"
-          src="/assets/img/hero/3d-casque-vr.webp"
+          srcset="/assets/img/hero/3d-casque-vr-780.webp 780w, /assets/img/hero/3d-casque-vr.webp 1179w" sizes="390px" src="/assets/img/hero/3d-casque-vr.webp"
           alt="Casque de realite virtuelle en trois dimensions"
-        />
+        width="897" height="657" />
         <button class="hero__fleche" id="hero__fleche" type="button" aria-label="Defiler vers le contenu">
-          <img
+          <img decoding="async" loading="lazy"
             src="/assets/img/icons/icon/icon_fleche-accueil.svg"
             alt=""
           />
@@ -147,10 +169,10 @@
             bien sauver le monde dans ce film culte de Spielberg.
           </p>
           <a class="card__img" href="/fr/ready-player-one.html"
-            ><img
+            ><img decoding="async" loading="lazy"
               src="/assets/img/article-accueil/article_ready-player-one.webp"
               alt="article ready player one"
-          /></a>
+          width="562" height="600" /></a>
           <div class="card__button button">
             <a class="button-link" href="/fr/ready-player-one.html"
               >Découvrir Ready Player One</a
@@ -168,10 +190,10 @@
             nécessité.
           </p>
           <a class="card__img" href="/fr/le-casque-vr.html"
-            ><img
+            ><img decoding="async" loading="lazy"
               src="/assets/img/article-accueil/article_frise-chronologique.webp"
               alt="article ready player one"
-          /></a>
+          width="562" height="600" /></a>
           <div class="card__button button">
             <a class="button-link" href="/fr/le-casque-vr.html"
               >Découvrir le Casque VR</a
@@ -188,10 +210,10 @@
             audace l'interaction entre technologie et humanité.
           </p>
           <a class="card__img" href="/fr/steven-spielberg.html"
-            ><img
+            ><img decoding="async" loading="lazy"
               src="/assets/img/article-accueil/article_spielberg.webp"
               alt="article ready player one"
-          /></a>
+          width="562" height="600" /></a>
           <div class="card__button button">
             <a class="button-link" href="/fr/steven-spielberg.html"
               >Découvrir Steven Spielberg</a
@@ -208,10 +230,10 @@
             réalité n'était qu'une vaste simulation, un simple jeu d'illusions ?
           </p>
           <a class="card__img" href="/fr/l-hypothese-de-la-simulation.html"
-            ><img
+            ><img decoding="async" loading="lazy"
               src="/assets/img/article-accueil/article_livre.webp"
               alt="article ready player one"
-          /></a>
+          width="562" height="600" /></a>
           <div class="card__button button">
             <a class="button-link" href="/fr/l-hypothese-de-la-simulation.html"
               >Découvrir “l’Hypothèse de la Simulation”</a
@@ -228,10 +250,10 @@
             rétro-futuriste, mêlant nostalgie et futur technologique.
           </p>
           <a class="card__img" href="/fr/the-oasis.html"
-            ><img
+            ><img decoding="async" loading="lazy"
               src="/assets/img/article-accueil/article_musique.webp"
               alt="article ready player one"
-          /></a>
+          width="562" height="600" /></a>
           <div class="card__button button">
             <a class="button-link" href="/fr/the-oasis.html"
               >Découvrir “The Oasis”</a
@@ -249,10 +271,10 @@
             peu.
           </p>
           <a class="card__img" href="/fr/le-lore.html"
-            ><img
+            ><img decoding="async" loading="lazy"
               src="/assets/img/article-accueil/article_story.webp"
               alt="article ready player one"
-          /></a>
+          width="562" height="600" /></a>
           <div class="card__button button">
             <a class="button-link" href="/fr/le-lore.html"
               >Découvrir “Le Lore”</a
@@ -283,7 +305,7 @@
         <ul class="footer__social-list">
           <li class="footer__social-item">
             <span class="footer__social-link" aria-hidden="true">
-              <img
+              <img decoding="async" loading="lazy"
                 class="footer__social-icon"
                 src="/assets/img/icons/logo/logo_instagram.svg"
                 alt=""
@@ -292,7 +314,7 @@
           </li>
           <li class="footer__social-item">
             <span class="footer__social-link" aria-hidden="true">
-              <img
+              <img decoding="async" loading="lazy"
                 class="footer__social-icon"
                 src="/assets/img/icons/logo/logo_facebook.svg"
                 alt=""
@@ -313,11 +335,11 @@
           >
         </p>
       </div>
-      <img
+      <img decoding="async" loading="lazy"
         class="footer-background"
         src="/assets/img/footer/footer-background.webp"
         alt=""
-      />
+      width="786" height="964" />
     </footer>
   </body>
 </html>

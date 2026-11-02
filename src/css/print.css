@@ -1,0 +1,37 @@
+@media print {
+    *,
+    *::before,
+    *::after {
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    nav,
+    button,
+    video,
+    iframe,
+    .hero__fleche,
+    .menu,
+    .carousel__controls,
+    .footer-background {
+        display: none !important;
+    }
+
+    body {
+        max-width: none;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+}
