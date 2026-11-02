@@ -56,6 +56,9 @@
 
 .hero__fleche {
     position: absolute;
+    border: 0;
+    background: transparent;
+    padding: 0;
     z-index: 1;
     top: 600px; /* Ajusté pour mobile */
     height: 50px;
@@ -96,6 +99,7 @@
 
 /* Styles pour les pages (hero--page) */
 .hero--page {
+    margin-top: 95px; /* Ajusté pour mobile */
     position: relative;
     min-height: 300px; /* Hauteur minimale pour les pages */
 }

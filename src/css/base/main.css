@@ -1,6 +1,27 @@
 body {
     font-family: var(--font-primary);
     position: relative;
+    color: var(--noir);
+    background-color: var(--blanc);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+dt,
+dd,
+figcaption,
+blockquote,
+a,
+button,
+label {
+    color: inherit;
+    background-color: transparent;
 }
 
 h1 {

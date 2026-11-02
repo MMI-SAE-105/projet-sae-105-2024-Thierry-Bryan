@@ -20,7 +20,7 @@
           src="/assets/img/icons/logo/logo_omni-sphere-noir.svg"
           alt="logo"
         />
-        <h2 class="header__logo-title">OmniSphère.</h2>
+        <p class="header__logo-title">OmniSphère.</p>
       </a>
       <div class="header__right--page">
         <a class="header__langue--page" href="/fr/ready-player-one.html">FR</a>
@@ -81,29 +81,29 @@
           <p class="menu__social-title">FOLLOW US</p>
           <ul class="menu__social-list">
             <li class="menu__social-item">
-              <a class="menu__social-link" href="">
+              <span class="menu__social-link" aria-hidden="true">
                 <img
                   class="menu__social-icon"
                   src="/assets/img/icons/logo/logo_instagram.svg"
-                  alt="Instagram"
+                  alt=""
                 />
-              </a>
+              </span>
             </li>
             <li class="menu__social-item">
-              <a class="menu__social-link" href="">
+              <span class="menu__social-link" aria-hidden="true">
                 <img
                   class="menu__social-icon"
                   src="/assets/img/icons/logo/logo_facebook.svg"
-                  alt="Facebook"
+                  alt=""
                 />
-              </a>
+              </span>
             </li>
           </ul>
         </div>
         <img
           class="menu__background"
           src="/assets/img/menu/menu-background.webp"
-          alt="Menu background"
+          alt=""
         />
       </nav>
     </header>
@@ -112,7 +112,7 @@
         <img
           class="hero__ellipse"
           src="/assets/img/icons/ellipse2.webp"
-          alt="Decorative ellipse"
+          alt=""
         />
         <img
           class="hero__img"
@@ -124,9 +124,9 @@
         <hr class="hook__line--top" />
       </div>
       <section class="hook">
-        <h2 class="hook__title">
+        <h1 class="hook__title">
           “Ready Player One”: Escape into a Virtual World
-        </h2>
+        </h1>
         <p class="hook__text">
           In a dystopian future, Ready Player One immerses us in the OASIS, a virtual world where escape becomes an essential quest.
         </p>
@@ -139,14 +139,18 @@
         <img
           class="ready-player-one__logo"
           src="/assets/img/page-film_ready-player-one/logo_ready-player-one.webp"
-          alt="ready player one logo"
+          alt="Ready Player One logo"
         />
         <div class="ready-player-one__trailer">
           <video
             class="ready-player-one__video"
             src="/assets/video/bande-annonce_ready-player-one-vo.mp4"
-            controls
+            aria-label="Ready Player One trailer video" aria-describedby="trailer-alternative" controls
           ></video>
+          <p id="trailer-alternative">
+            The trailer presents the virtual world of the
+            OASIS and Wade Watts’s quest.
+          </p>
           <a
             class="ready-player-one__link"
             href="https://www.youtube.com/watch?v=B-ieGrOQBzA"
@@ -155,17 +159,18 @@
         </div>
       </div>
       <div class="content">
-        <h3 class="content__title">Synopsis</h3>
+        <h2 class="content__title">Synopsis</h2>
         <p class="content__text">
           Ready Player One is a science fiction film released in 2018, directed by Steven Spielberg, based on the novel of the same name by Ernest Cline. The story is set in 2045, in a dystopian world where people escape the bleakness of their daily lives by immersing themselves in the OASIS, a virtual reality universe rich in possibilities.
         </p>
         <figure class="content__img">
           <img
             src="/assets/img/page-film_ready-player-one/image-film.webp"
-            alt="ready player one"
+            alt="Scene from Ready Player One"
             data-full-img="/assets/img/page-film_ready-player-one/image-film.webp"
           />
-          <dialog id="lightbox">
+          <dialog id="lightbox" aria-label="Enlarged Ready Player One image">
+            <button type="button" class="lightbox__close" aria-label="Close enlarged image">X</button>
             <img
               src="/assets/img/page-film_ready-player-one/image-film.webp"
               alt="Illustration: image film"
@@ -187,18 +192,18 @@
           <img
             class="ellipse--ready-player-one"
             src="/assets/img/icons/ellipse2.webp"
-            alt="Decorative ellipse"
+            alt=""
           />
         </div>
       </div>
 
       <blockquote class="quote">"A virtual reality universe"</blockquote>
       <div class="content">
-        <h3 class="content__title">Steven Spielberg</h3>
+        <h2 class="content__title">Steven Spielberg</h2>
         <figure class="content__img">
           <img
             src="/assets/img/page-film_ready-player-one/steven-spielberg.webp"
-            alt="steven spielberg"
+            alt="Steven Spielberg"
           />
           <figcaption class="content__img-legend">Steven Spielberg</figcaption>
         </figure>
@@ -212,12 +217,12 @@
           <img
             class="ellipse--ready-player-one-spielberg"
             src="/assets/img/icons/ellipse2.webp"
-            alt="Decorative ellipse"
+            alt=""
           />
         </div>
       </div>
       <div class="content">
-        <h3 class="content__title">Music "The Oasis"</h3>
+        <h2 class="content__title">Music "The Oasis"</h2>
         <figure class="content__img">
           <img
             src="/assets/img/page-film_ready-player-one/musique.webp"
@@ -237,12 +242,12 @@
           <img
             class="ellipse--ready-player-one-musique"
             src="/assets/img/icons/ellipse2.webp"
-            alt="Decorative ellipse"
+            alt=""
           />
         </div>
       </div>
       <div class="content">
-        <h3 class="content__title" id="carousel-heading">Associated Filmography</h3>
+        <h2 class="content__title" id="carousel-heading">Associated Filmography</h2>
         <div class="carousel" aria-labelledby="carousel-heading">
           <div class="carousel__container" role="region" aria-live="polite">
             <div class="carousel__item">
@@ -250,13 +255,15 @@
                 <div class="carousel__item-img">
                   <img
                     src="/assets/img/page-film_ready-player-one/tron.webp"
-                    alt="tron"
+                    alt="Tron: Legacy"
                   />
                 </div>
                 <div class="carousel__back">
                   <div class="carousel__back-border">
                     <p>
-                      Tron: Legacy (2010) follows Sam Flynn, the son of the creator of the digital world, who finds himself drawn into a virtual universe. The film explores modern virtual reality and human-machine interaction, while offering immersive futuristic visuals and an iconic soundtrack, marking a technological turning point in cinema.
+                      Tron: Legacy (2010) follows Sam Flynn into a virtual
+                      world where he uncovers his father’s secrets and faces an
+                      uncontrollable program.
                     </p>
                   </div>
                 </div>
@@ -267,12 +274,14 @@
                 <div class="carousel__item-img">
                   <img
                     src="/assets/img/page-film_ready-player-one/le-probleme-a-trois-corps.webp"
-                    alt="the three-body problem"
+                    alt="The Three-Body Problem"
                   />
                 </div>
                 <div class="carousel__back">
                   <p>
-                    The Three-Body Problem deals with the consequences of artificial intelligence and our place in the universe, offering a captivating perspective on the future challenges humanity might face.
+                    The Three-Body Problem follows three civilizations facing a
+                    threat from space, raising questions about science,
+                    intelligence, and the future of humanity.
                   </p>
                 </div>
               </div>
@@ -282,12 +291,14 @@
                 <div class="carousel__item-img">
                   <img
                     src="/assets/img/page-film_ready-player-one/matrix.webp"
-                    alt="matrix"
+                    alt="The Matrix"
                   />
                 </div>
                 <div class="carousel__back">
                   <p>
-                    The Three-Body Problem deals with the consequences of artificial intelligence and our place in the universe, offering a captivating perspective on the future challenges humanity might face.
+                    The Matrix follows Neo, a hacker who discovers a reality
+                    controlled by machines and joins a rebellion to free
+                    humanity from the illusion.
                   </p>
                 </div>
               </div>
@@ -316,7 +327,7 @@
       </div>
     </main>
     <footer class="footer">
-      <h4 class="footer__title"><a class="footer__title-link" href="/en/index.html">OmniSphere.</a></h4>
+      <p class="footer__title"><a class="footer__title-link" href="/en/index.html">OmniSphere.</a></p>
       <div class="footer__links">
         <ul class="footer__list">
           <li class="footer__item">
@@ -336,22 +347,22 @@
         <p class="footer__social-title">FOLLOW US</p>
         <ul class="footer__social-list">
           <li class="footer__social-item">
-            <a class="footer__social-link" href="">
+            <span class="footer__social-link" aria-hidden="true">
               <img
                 class="footer__social-icon"
                 src="/assets/img/icons/logo/logo_instagram.svg"
-                alt="Instagram"
+                alt=""
               />
-            </a>
+            </span>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link" href="">
+            <span class="footer__social-link" aria-hidden="true">
               <img
                 class="footer__social-icon"
                 src="/assets/img/icons/logo/logo_facebook.svg"
-                alt="Facebook"
+                alt=""
               />
-            </a>
+            </span>
           </li>
         </ul>
       </div>
@@ -370,7 +381,7 @@
       <img
         class="footer-background"
         src="/assets/img/footer/footer-background.webp"
-        alt="Footer background"
+        alt=""
       />
     </footer>
   </body>

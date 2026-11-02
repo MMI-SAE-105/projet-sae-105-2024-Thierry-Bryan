@@ -9,18 +9,20 @@
     border: 10px solid var(--rouge);
     border-radius: 20px;
     overflow: visible;
-    display: none;
     opacity: 0;
     transition: opacity 0.5s;
     margin-top: -700px;
+}
+
+#lightbox:not([open]) {
+    display: none;
 }
 
 #lightbox::backdrop {
     background: rgba(72, 4, 4, 0.911);
 }
 
-#lightbox::before {
-    content: 'X';
+.lightbox__close {
     display: flex;
     position: absolute;
     top: -10px;
@@ -33,7 +35,6 @@
     line-height: 40px;
     border-radius: 50%;
     z-index: 10;
-
 }
 
 

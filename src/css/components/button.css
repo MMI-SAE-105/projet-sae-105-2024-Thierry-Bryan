@@ -29,11 +29,10 @@
   box-sizing: border-box;
 }
 
-.button-link:hover {
-  background: linear-gradient(90deg, var(--rose), var(--bleu-cyan));
-  -webkit-background-clip: text; 
-  background-clip: text; 
-  -webkit-text-fill-color: transparent; 
+.button-link:hover,
+.button-link:focus-visible {
+  background: linear-gradient(45deg, var(--violet), #0047ab);
+  color: var(--blanc);
 }
 
 button {

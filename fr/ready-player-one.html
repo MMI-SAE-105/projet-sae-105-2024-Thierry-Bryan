@@ -20,7 +20,7 @@
           src="/assets/img/icons/logo/logo_omni-sphere-noir.svg"
           alt="logo"
         />
-        <h2 class="header__logo-title">OmniSphère.</h2>
+        <p class="header__logo-title">OmniSphère.</p>
       </a>
 
       <div class="header__right--page">
@@ -82,29 +82,29 @@
           <p class="menu__social-title">NOUS SUIVRE</p>
           <ul class="menu__social-list">
             <li class="menu__social-item">
-              <a class="menu__social-link" href="">
+              <span class="menu__social-link" aria-hidden="true">
                 <img
                   class="menu__social-icon"
                   src="/assets/img/icons/logo/logo_instagram.svg"
-                  alt="Instagram"
+                  alt=""
                 />
-              </a>
+              </span>
             </li>
             <li class="menu__social-item">
-              <a class="menu__social-link" href="">
+              <span class="menu__social-link" aria-hidden="true">
                 <img
                   class="menu__social-icon"
                   src="/assets/img/icons/logo/logo_facebook.svg"
-                  alt="Facebook"
+                  alt=""
                 />
-              </a>
+              </span>
             </li>
           </ul>
         </div>
         <img
           class="menu__background"
           src="/assets/img/menu/menu-background.webp"
-          alt="Arriere-plan du menu"
+          alt=""
         />
       </nav>
     </header>
@@ -113,7 +113,7 @@
         <img
           class="hero__ellipse"
           src="/assets/img/icons/ellipse2.webp"
-          alt="Element decoratif elliptique"
+          alt=""
         />
         <img
           class="hero__img"
@@ -125,9 +125,9 @@
         <hr class="hook__line--top" />
       </div>
       <section class="hook">
-        <h2 class="hook__title">
+        <h1 class="hook__title">
           “Ready Player One” : L'évasion dans un monde virtuel
-        </h2>
+        </h1>
         <p class="hook__text">
           Dans un futur dystopique, Ready Player One nous plonge dans l'OASIS,
           un monde virtuel où l'évasion devient une quête essentielle.
@@ -141,14 +141,18 @@
         <img
           class="ready-player-one__logo"
           src="/assets/img/page-film_ready-player-one/logo_ready-player-one.webp"
-          alt="logo ready player one"
+          alt="Logo de Ready Player One"
         />
         <div class="ready-player-one__trailer">
           <video
             class="ready-player-one__video"
             src="/assets/video/bande-annonce_ready-player-one.mp4"
-            controls
+            aria-label="Video de la bande-annonce de Ready Player One" aria-describedby="trailer-alternative" controls
           ></video>
+          <p id="trailer-alternative">
+            La bande-annonce présente l’univers virtuel
+            de l’OASIS et la quête de Wade Watts.
+          </p>
           <a
             class="ready-player-one__link"
             href="https://www.youtube.com/watch?v=oYGkAMHCOC4&t=5s"
@@ -157,7 +161,7 @@
         </div>
       </div>
       <div class="content">
-        <h3 class="content__title">Synopsis</h3>
+        <h2 class="content__title">Synopsis</h2>
         <p class="content__text">
           Ready Player One est un film de science-fiction sorti en 2018, réalisé
           par Steven Spielberg, qui s’inspire du roman éponyme d’Ernest Cline.
@@ -168,10 +172,11 @@
         <figure class="content__img">
           <img
             src="/assets/img/page-film_ready-player-one/image-film.webp"
-            alt="ready player one"
+            alt="Scene de Ready Player One"
             data-full-img="/assets/img/page-film_ready-player-one/image-film.webp"
           />
-          <dialog id="lightbox">
+          <dialog id="lightbox" aria-label="Image agrandie de Ready Player One">
+            <button type="button" class="lightbox__close" aria-label="Fermer l’image agrandie">X</button>
             <img
               src="/assets/img/page-film_ready-player-one/image-film.webp"
               alt="Illustration : image film"
@@ -199,18 +204,18 @@
           <img
             class="ellipse--ready-player-one"
             src="/assets/img/icons/ellipse2.webp"
-            alt="Element decoratif elliptique"
+            alt=""
           />
         </div>
       </div>
 
       <blockquote class="quote">"Un univers de réalité virtuelle"</blockquote>
       <div class="content">
-        <h3 class="content__title">Steven Spielberg</h3>
+        <h2 class="content__title">Steven Spielberg</h2>
         <figure class="content__img">
           <img
             src="/assets/img/page-film_ready-player-one/steven-spielberg.webp"
-            alt="steven spielberg"
+            alt="Steven Spielberg"
           />
           <figcaption class="content__img-legend">Steven Spielberg</figcaption>
         </figure>
@@ -230,16 +235,16 @@
           <img
             class="ellipse--ready-player-one-spielberg"
             src="/assets/img/icons/ellipse2.webp"
-            alt="Element decoratif elliptique"
+            alt=""
           />
         </div>
       </div>
       <div class="content">
-        <h3 class="content__title">Musique "The Oasis"</h3>
+        <h2 class="content__title">Musique "The Oasis"</h2>
         <figure class="content__img">
           <img
             src="/assets/img/page-film_ready-player-one/musique.webp"
-            alt="steven spielberg"
+            alt="Steven Spielberg"
           />
           <figcaption class="content__img-legend">
             Image générée par l'intelligence artificielle
@@ -258,12 +263,12 @@
           <img
             class="ellipse--ready-player-one-musique"
             src="/assets/img/icons/ellipse2.webp"
-            alt="Element decoratif elliptique"
+            alt=""
           />
         </div>
       </div>
       <div class="content">
-        <h3 class="content__title" id="carousel-heading">Filmographie Associée</h3>
+        <h2 class="content__title" id="carousel-heading">Filmographie Associée</h2>
         <div class="carousel" aria-labelledby="carousel-heading">
           <div class="carousel__container" role="region" aria-live="polite">
             <div class="carousel__item">
@@ -271,18 +276,15 @@
                 <div class="carousel__item-img">
                   <img
                     src="/assets/img/page-film_ready-player-one/tron.webp"
-                    alt="tron"
+                    alt="Tron : L Heritage"
                   />
                 </div>
                 <div class="carousel__back">
                   <div class="carousel__back-border">
                     <p>
-                      Tron: L'Héritage (2010) suit Sam Flynn, fils du créateur
-                      du monde numérique, qui se retrouve aspiré dans un univers
-                      virtuel. Le film explore la réalité virtuelle moderne et
-                      l’interaction homme-machine, tout en proposant des visuels
-                      futuristes immersifs et une bande sonore emblématique,
-                      marquant un tournant technologique au cinéma.
+                      Tron: L'Héritage (2010) suit Sam Flynn, plongé dans un
+                      univers virtuel où il découvre les secrets de son père et
+                      affronte un programme devenu incontrôlable.
                     </p>
                   </div>
                 </div>
@@ -293,15 +295,14 @@
                 <div class="carousel__item-img">
                   <img
                     src="/assets/img/page-film_ready-player-one/le-probleme-a-trois-corps.webp"
-                    alt="le probleme a trois corps"
+                    alt="Le Probleme a trois corps"
                   />
                 </div>
                 <div class="carousel__back">
                   <p>
-                    Le Problème à trois corps traite des conséquences de
-                    l'intelligence artificielle et de notre place dans
-                    l'univers, offrant une perspective captivante sur les défis
-                    futurs que l'humanité pourrait rencontrer.
+                    Le Problème à trois corps suit trois civilisations
+                    confrontées à une menace venue de l’espace, soulevant des
+                    questions sur la science, l’intelligence et l’avenir humain.
                   </p>
                 </div>
               </div>
@@ -311,15 +312,14 @@
                 <div class="carousel__item-img">
                   <img
                     src="/assets/img/page-film_ready-player-one/matrix.webp"
-                    alt="matrix"
+                    alt="Matrix"
                   />
                 </div>
                 <div class="carousel__back">
                   <p>
-                    Le Problème à trois corps traite des conséquences de
-                    l'intelligence artificielle et de notre place dans
-                    l'univers, offrant une perspective captivante sur les défis
-                    futurs que l'humanité pourrait rencontrer.
+                    Matrix suit Neo, un hacker qui découvre une réalité
+                    contrôlée par les machines et rejoint une rébellion pour
+                    libérer l’humanité de cette illusion.
                   </p>
                 </div>
               </div>
@@ -348,7 +348,7 @@
       </div>
     </main>
     <footer class="footer">
-      <h4 class="footer__title"><a class="footer__title-link" href="/fr/index.html">OmniSphère.</a></h4>
+      <p class="footer__title"><a class="footer__title-link" href="/fr/index.html">OmniSphère.</a></p>
       <div class="footer__links">
         <ul class="footer__list">
           <li class="footer__item">
@@ -368,22 +368,22 @@
         <p class="footer__social-title">NOUS SUIVRE</p>
         <ul class="footer__social-list">
           <li class="footer__social-item">
-            <a class="footer__social-link" href="">
+            <span class="footer__social-link" aria-hidden="true">
               <img
                 class="footer__social-icon"
                 src="/assets/img/icons/logo/logo_instagram.svg"
-                alt="Instagram"
+                alt=""
               />
-            </a>
+            </span>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link" href="">
+            <span class="footer__social-link" aria-hidden="true">
               <img
                 class="footer__social-icon"
                 src="/assets/img/icons/logo/logo_facebook.svg"
-                alt="Facebook"
+                alt=""
               />
-            </a>
+            </span>
           </li>
         </ul>
       </div>
@@ -402,7 +402,7 @@
       <img
         class="footer-background"
         src="/assets/img/footer/footer-background.webp"
-        alt="Arriere-plan du pied de page"
+        alt=""
       />
     </footer>
   </body>

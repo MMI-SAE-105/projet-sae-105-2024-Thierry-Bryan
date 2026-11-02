@@ -195,73 +195,78 @@ if (items.length > 0) {
 //CARD
 
 const cards = document.querySelectorAll('.carousel-card');
+const isEnglish = document.documentElement.lang === 'en';
 
 cards.forEach((card) => {
-  card.addEventListener('click', () => {
+  const image = card.querySelector('img');
+  card.setAttribute('role', 'button');
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('aria-pressed', 'false');
+  const cardLabel = isEnglish ? 'Show information about' : 'Afficher les informations sur';
+  card.setAttribute('aria-label', image ? `${cardLabel} ${image.alt}` : cardLabel);
+
+  const toggleCard = () => {
     card.classList.toggle('flipped');
+    card.setAttribute('aria-pressed', card.classList.contains('flipped').toString());
+  };
+
+  card.addEventListener('click', toggleCard);
+  card.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggleCard();
+    }
   });
 });
 
 const arrow = document.getElementById("hero__fleche");
 
-// Ajoutez un événement de clic
-arrow.addEventListener("click", () => {
+if (arrow) {
+  arrow.addEventListener("click", () => {
     window.scrollBy({
-        top: 840, // Ajustez le nombre de pixels à descendre
-        behavior: "smooth" // Ajoutez un effet de défilement fluide
+      top: 830,
+      behavior: "smooth"
     });
-});
-
-//FLECHE
-document.getElementById("hero__fleche").addEventListener("click", () => {
-    window.scrollBy({
-        top: 830, // Le nombre de pixels à descendre (ajustez selon vos besoins)
-        behavior: "smooth" // Défilement fluide
-    });
-});
+  });
+}
 
 //Light BOX
 const lightbox = document.querySelector('#lightbox');
 const listThumbnail = document.querySelectorAll("[data-full-img]");
 const lightboxImg = document.querySelector('#lightbox img');
 
-listThumbnail.forEach((thumbnail) => {
-    thumbnail.addEventListener('click', (evt) => {
-        lightboxImg.src = thumbnail.dataset.fullImg;
-        lightbox.classList.add('open');
-        lightbox.classList.remove('close');
+if (lightbox && lightboxImg) {
+  const closeLightbox = lightbox.querySelector('.lightbox__close');
+  const openLightbox = (thumbnail) => {
+    lightboxImg.src = thumbnail.dataset.fullImg;
+    lightboxImg.alt = thumbnail.alt;
+    lightbox.showModal();
+  };
+
+  listThumbnail.forEach((thumbnail) => {
+    thumbnail.setAttribute('role', 'button');
+    thumbnail.setAttribute('tabindex', '0');
+    const lightboxLabel = isEnglish ? 'Enlarge' : 'Agrandir';
+    thumbnail.setAttribute('aria-label', `${lightboxLabel} : ${thumbnail.alt}`);
+    thumbnail.addEventListener('click', () => openLightbox(thumbnail));
+    thumbnail.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openLightbox(thumbnail);
+      }
     });
-});
-
-lightbox.addEventListener('click', () => {
-    lightbox.classList.add('close');
-    lightbox.classList.remove('open');
-    setTimeout(() => {
-        lightbox.close();
-    }, 700); 
-});
-
-
-// Sélectionner tous les boutons avec la classe "button-link"
-const buttons = document.querySelectorAll(".button-link");
-
-// Ajouter des événements "mouseover" et "mouseout" pour chaque bouton
-buttons.forEach((button) => {
-  button.addEventListener("mouseover", () => {
-    // Appliquer le gradient au texte
-    button.style.setProperty("background", "linear-gradient(90deg, var(--rose), var(--bleu-cyan))");    button.style.webkitBackgroundClip = "text"; // Support pour WebKit (Chrome, Safari)
-    button.style.webkitTextFillColor = "transparent"; // Support pour WebKit
-    button.style.color = "transparent"; // Fallback pour d'autres navigateurs
   });
 
-  button.addEventListener("mouseout", () => {
-    // Réinitialiser les styles au survol
-    button.style.background = "none";
-    button.style.webkitTextFillColor = "var(--noir)";
-    button.style.color = "var(--noir)";
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      lightbox.close();
+    }
   });
-});
 
+  if (closeLightbox) {
+    closeLightbox.addEventListener('click', () => lightbox.close());
+  }
+}
 
 
 const swipper = new Swiper('.card-wrapper', {
@@ -278,4 +283,3 @@ const swipper = new Swiper('.card-wrapper', {
     prevEl: '.swiper-button-prev',
   },
 });
-
