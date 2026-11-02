@@ -171,7 +171,16 @@
             preload="metadata"
             src="/assets/video/bande-annonce_ready-player-one.mp4"
             aria-label="Video de la bande-annonce de Ready Player One" aria-describedby="trailer-alternative" controls
-          ></video>
+          >
+            <track
+              kind="subtitles"
+              src="/assets/video/transcription/bande-annonce%20ready-player-one.vtt"
+              srclang="fr"
+              label="Français"
+              default
+            />
+            Votre navigateur ne prend pas en charge la vidéo HTML5.
+          </video>
           <p id="trailer-alternative">
             La bande-annonce présente l’univers virtuel
             de l’OASIS et la quête de Wade Watts.
