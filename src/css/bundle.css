@@ -2350,8 +2350,12 @@ body.noscroll {
     width: 109px;
 }
 .content__spotify-iframe {
-    width :100%;
-    
+    display: block;
+    width: 100%;
+    height: 152px;
+    border: 0;
+    border-radius: 12px;
+    box-sizing: border-box;
 }
 .spotify-embed--rounded { border-radius: 12px; border: none; }
 
