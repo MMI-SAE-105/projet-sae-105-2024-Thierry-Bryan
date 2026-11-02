@@ -35,7 +35,7 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header" role="banner">
       <a class="header__logoLink" href="/fr/index.html">
         <img decoding="async"
           class="header__logo-img"
@@ -54,7 +54,7 @@
           <span class="menu-btn__bar" aria-hidden="true"></span>
         </button>
       </div>
-      <nav class="header__menu menu" id="mainNav" aria-hidden="true">
+      <nav class="header__menu menu" id="mainNav" aria-label="Navigation principale" aria-hidden="true" role="navigation">
         <a class="menu__logo" href="/fr/index.html"
           ><img decoding="async" loading="lazy"
             src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg"
@@ -127,7 +127,7 @@
         width="786" height="1704" />
       </nav>
     </header>
-    <main>
+    <main role="main">
       <section class="hero">
         <img fetchpriority="high" loading="eager" decoding="async"
           class="hero__background"
@@ -283,7 +283,7 @@
         </article>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <p class="footer__title"><a class="footer__title-link" href="/fr/index.html">OmniSphère.</a></p>
       <div class="footer__links">
         <ul class="footer__list">
@@ -298,6 +298,7 @@
               >AUTRES PROJETS</a
             >
           </li>
+          <li class="footer__item"><a class="footer__link" href="/fr/plan-du-site.html">PLAN DU SITE</a></li>
         </ul>
       </div>
       <div class="footer__social">
@@ -326,7 +327,7 @@
       <div class="footer__legal">
         <p class="footer__legal-title">Mentions Légales</p>
         <p class="footer__legal-text">
-          © 2024 OmniShère. - Projet réalisé en 2024 dans le cadre d’un exercice
+          © 2024 OmniSphère. - Projet réalisé en 2024 dans le cadre d’un exercice
           pédagogique au département
           <a
             class="footer__legal-link"

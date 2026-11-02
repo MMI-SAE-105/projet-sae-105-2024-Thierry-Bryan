@@ -2355,3 +2355,36 @@ body.noscroll {
 }
 .spotify-embed--rounded { border-radius: 12px; border: none; }
 
+
+.breadcrumb {
+    padding: 14px 20px 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.breadcrumb__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb__item + .breadcrumb__item::before {
+    content: "/";
+    margin-right: 6px;
+    color: var(--gris);
+}
+
+.breadcrumb a {
+    color: var(--bleu);
+}
+
+.breadcrumb [aria-current="page"] {
+    color: var(--gris);
+}
+
+.site-map-page {
+    padding-top: 100px;
+}

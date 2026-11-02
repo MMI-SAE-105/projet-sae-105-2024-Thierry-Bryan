@@ -35,7 +35,7 @@
     />
   </head>
   <body>
-    <header class="header--page">
+    <header class="header--page" role="banner">
       <a class="header__logoLink--page" href="/fr/index.html">
         <img decoding="async"
           class="header__logo-img--page"
@@ -57,7 +57,7 @@
         </button>
       </div>
       <hr class="header__line" />
-      <nav class="header__menu menu" id="mainNav" aria-hidden="true">
+      <nav class="header__menu menu" id="mainNav" aria-label="Navigation principale" aria-hidden="true" role="navigation">
         <a class="menu__logo" href="/fr/index.html"
           ><img decoding="async" loading="lazy"
             src="/assets/img/icons/logo/logo_omni-sphere-blanc.svg"
@@ -130,7 +130,7 @@
         width="786" height="1704" />
       </nav>
     </header>
-    <main>
+    <main role="main">
       <div class="hero hero--page">
         <img loading="lazy" decoding="async"
           class="hero__ellipse"
@@ -143,6 +143,12 @@
           alt="Illustration de la page Contact"
         width="1179" height="1266" />
       </div>
+      <nav class="breadcrumb" aria-label="Fil d'Ariane" role="navigation">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="/fr/index.html">Accueil</a></li>
+          <li class="breadcrumb__item" aria-current="page">Contact</li>
+        </ol>
+      </nav>
       <div class="hook__line-container--top">
         <hr class="hook__line--top" />
       </div>
@@ -176,9 +182,13 @@
         </p>
         <section class="contact">
           <h2 class="contact__title">Formulaire de Contact</h2>
-          <form action="#" method="post" class="contact__form" novalidate>
+          <form action="#" method="post" class="contact__form">
             <p class="contact__required-note">
               Les champs marqués « Champ obligatoire » sont requis.
+            </p>
+            <p class="contact__required-note">
+              Ce formulaire est actuellement une démonstration : aucun message
+              ne sera envoyé.
             </p>
             <p class="contact__status" role="status" aria-live="polite"></p>
             <div class="contact__group">
@@ -194,6 +204,7 @@
                 name="name"
                 class="contact__input"
                 placeholder="Entrez votre nom"
+                autocomplete="family-name"
                 aria-describedby="name-error"
                 required
               />
@@ -213,6 +224,7 @@
                 name="prenom"
                 class="contact__input"
                 placeholder="Entrez votre prénom"
+                autocomplete="given-name"
                 aria-describedby="prenom-error"
                 required
               />
@@ -232,6 +244,7 @@
                 name="email"
                 class="contact__input"
                 placeholder="Entrez votre adresse email"
+                autocomplete="email"
                 aria-describedby="email-error"
                 required
               />
@@ -265,7 +278,7 @@
         </section>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <p class="footer__title">
         <a class="footer__title-link" href="/fr/index.html">OmniSphère.</a>
       </p>
@@ -282,6 +295,7 @@
               >AUTRES PROJETS</a
             >
           </li>
+          <li class="footer__item"><a class="footer__link" href="/fr/plan-du-site.html">PLAN DU SITE</a></li>
         </ul>
       </div>
       <div class="footer__social">
@@ -310,7 +324,7 @@
       <div class="footer__legal">
         <p class="footer__legal-title">Mentions Légales</p>
         <p class="footer__legal-text">
-          © 2024 OmniShère. - Projet réalisé en 2024 dans le cadre d’un exercice
+          © 2024 OmniSphère. - Projet réalisé en 2024 dans le cadre d’un exercice
           pédagogique au département
           <a
             class="footer__legal-link"
