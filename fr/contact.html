@@ -176,7 +176,11 @@
         </p>
         <section class="contact">
           <h2 class="contact__title">Formulaire de Contact</h2>
-          <form action="#" method="post" class="contact__form">
+          <form action="#" method="post" class="contact__form" novalidate>
+            <p class="contact__required-note">
+              Les champs marqués « Champ obligatoire » sont requis.
+            </p>
+            <p class="contact__status" role="status" aria-live="polite"></p>
             <div class="contact__group">
               <label for="name" class="contact__label"
                 >Nom:
@@ -189,9 +193,11 @@
                 id="name"
                 name="name"
                 class="contact__input"
-                placeholder="Entrez votre prénom"
+                placeholder="Entrez votre nom"
+                aria-describedby="name-error"
                 required
               />
+              <p class="contact__error" id="name-error"></p>
             </div>
 
             <div class="contact__group">
@@ -206,31 +212,49 @@
                 id="prenom"
                 name="prenom"
                 class="contact__input"
-                placeholder="Entrez votre nom"
+                placeholder="Entrez votre prénom"
+                aria-describedby="prenom-error"
                 required
               />
+              <p class="contact__error" id="prenom-error"></p>
             </div>
 
             <div class="contact__group">
-              <label for="email" class="contact__label">Email</label>
+              <label for="email" class="contact__label"
+                >Email
+                <span class="contact__label-required"
+                  >(Champ obligatoire)</span
+                ></label
+              >
               <input
                 type="email"
                 id="email"
                 name="email"
                 class="contact__input"
                 placeholder="Entrez votre adresse email"
+                aria-describedby="email-error"
+                required
               />
+              <p class="contact__error" id="email-error"></p>
             </div>
 
             <div class="contact__group">
-              <label for="message" class="contact__label">Message</label>
+              <label for="message" class="contact__label"
+                >Message
+                <span class="contact__label-required"
+                  >(Champ obligatoire)</span
+                ></label
+              >
               <textarea
                 id="message"
                 name="message"
                 class="contact__textarea"
                 rows="5"
                 placeholder="Écrivez votre message ici"
+                aria-describedby="message-error"
+                required
               ></textarea>
+              <p class="contact__error" id="message-error"></p>
             </div>
             <div class="button__container--contact">
               <div class="button">

@@ -111,6 +111,76 @@ function continuePc() {
     closeMobileMessage();
 }
 
+function initContactForm() {
+    const form = document.querySelector('.contact__form');
+    if (!form) return;
+
+    const isEnglish = document.documentElement.lang === 'en';
+    const messages = isEnglish
+        ? {
+            required: 'Please complete this field.',
+            email: 'Please enter a valid email address.',
+            success: 'The form is complete. The sending feature will be available soon.',
+            summary: 'Please correct the highlighted fields.'
+        }
+        : {
+            required: 'Veuillez remplir ce champ.',
+            email: 'Veuillez saisir une adresse email valide.',
+            success: "Le formulaire est complet. L'envoi sera bientôt disponible.",
+            summary: 'Veuillez corriger les champs signalés.'
+        };
+    const fields = [...form.querySelectorAll('input, textarea')];
+    const status = form.querySelector('.contact__status');
+
+    function showError(field, message) {
+        const error = document.getElementById(`${field.id}-error`);
+        field.setAttribute('aria-invalid', 'true');
+        if (error) error.textContent = message;
+    }
+
+    function clearError(field) {
+        const error = document.getElementById(`${field.id}-error`);
+        field.removeAttribute('aria-invalid');
+        if (error) error.textContent = '';
+    }
+
+    function validateField(field) {
+        const value = field.value.trim();
+        if (!value) {
+            showError(field, messages.required);
+            return false;
+        }
+        if (field.type === 'email' && !field.validity.valid) {
+            showError(field, messages.email);
+            return false;
+        }
+        clearError(field);
+        return true;
+    }
+
+    fields.forEach((field) => {
+        field.addEventListener('blur', () => validateField(field));
+        field.addEventListener('input', () => {
+            if (field.getAttribute('aria-invalid') === 'true') validateField(field);
+            if (status) status.textContent = '';
+        });
+    });
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const valid = fields.map(validateField);
+        const firstInvalid = fields[valid.indexOf(false)];
+        if (firstInvalid) {
+            if (status) status.textContent = messages.summary;
+            firstInvalid.focus();
+            return;
+        }
+        if (status) status.textContent = messages.success;
+    });
+}
+
+initContactForm();
+
 // Réinitialiser le message si l'utilisateur redimensionne la fenêtre
 window.addEventListener('resize', () => {
     if (window.innerWidth <= 768) {

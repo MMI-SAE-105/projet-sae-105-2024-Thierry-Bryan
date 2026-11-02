@@ -168,7 +168,11 @@
         </p>
         <section class="contact">
             <h2 class="contact__title">Contact Form</h2>
-          <form action="#" method="post" class="contact__form">
+          <form action="#" method="post" class="contact__form" novalidate>
+            <p class="contact__required-note">
+              Fields marked “Required” must be completed.
+            </p>
+            <p class="contact__status" role="status" aria-live="polite"></p>
             <div class="contact__group">
               <label for="name" class="contact__label"
                 >Last Name:
@@ -182,8 +186,10 @@
                 name="name"
                 class="contact__input"
                 placeholder="Enter your last name"
+                aria-describedby="name-error"
                 required
               />
+              <p class="contact__error" id="name-error"></p>
             </div>
 
             <div class="contact__group">
@@ -199,30 +205,44 @@
                 name="first-name"
                 class="contact__input"
                 placeholder="Enter your first name"
+                aria-describedby="first-name-error"
                 required
               />
+              <p class="contact__error" id="first-name-error"></p>
             </div>
 
             <div class="contact__group">
-              <label for="email" class="contact__label">Email</label>
+              <label for="email" class="contact__label"
+                >Email
+                <span class="contact__label-required">(Required)</span></label
+              >
               <input
                 type="email"
                 id="email"
-                name="request-type"
+                name="email"
                 class="contact__input"
                 placeholder="Enter your email address"
+                aria-describedby="email-error"
+                required
               />
+              <p class="contact__error" id="email-error"></p>
             </div>
 
             <div class="contact__group">
-              <label for="message" class="contact__label">Message</label>
+              <label for="message" class="contact__label"
+                >Message
+                <span class="contact__label-required">(Required)</span></label
+              >
               <textarea
                 id="message"
                 name="message"
                 class="contact__textarea"
                 rows="5"
                 placeholder="Write your message here"
+                aria-describedby="message-error"
+                required
               ></textarea>
+              <p class="contact__error" id="message-error"></p>
             </div>
             <div class="button__container--contact">
               <div class="button">
