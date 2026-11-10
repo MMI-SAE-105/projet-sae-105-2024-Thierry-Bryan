@@ -722,7 +722,7 @@ footer {
 .footer__title-link {
     font-weight: bold;
     text-decoration: none;
-    color: inherit;
+    color: var(--blanc);
 }
 
 /* Components */
@@ -2378,15 +2378,19 @@ body.noscroll {
 .breadcrumb__item + .breadcrumb__item::before {
     content: "/";
     margin-right: 6px;
-    color: var(--gris);
+    color: var(--noir);
+}
+
+.breadcrumb__item {
+    color: var(--noir);
 }
 
 .breadcrumb a {
-    color: var(--bleu);
+    color: #004a8f;
 }
 
 .breadcrumb [aria-current="page"] {
-    color: var(--gris);
+    color: var(--noir);
 }
 
 .site-map-page {
